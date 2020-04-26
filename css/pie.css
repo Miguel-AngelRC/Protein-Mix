@@ -1,0 +1,21 @@
+footer{
+    background: #FED641;
+    color: white;
+    box-shadow: 1px 1px 6px black;
+}
+
+footer h2{
+    font-size: 30px;
+    margin: 10px;
+}
+
+footer img{
+    margin: 5px 10px;
+}
+
+footer p{
+    margin: 5px 20px;
+    font-size: 30px;
+    float: right;
+    color: white;
+}

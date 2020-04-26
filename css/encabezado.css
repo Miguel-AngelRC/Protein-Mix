@@ -1,12 +1,16 @@
+
+
 header{
+    margin: 0px;
     background: #FED641;
+    height: 100px;
 }
 
 #titulo{
     text-align: center;
     color: #fff;
-    height: 80px;
-    font-size: 50px;
+    font-size: 80px;
+    margin: 0px;
 }
 
 
@@ -14,31 +18,52 @@ header{
 #menu{
     font-size: 25px;
     overflow: hidden;
+    background: none;
 }
 
 #inicio{
     float: left;
     margin-left: 10px;
+    color: black;
 }
+#inicio:hover{
+    color:#FED641;
+    cursor:pointer;
+}
+
 #perfil{
     float: right;
     margin-right: 10px;
+    color: black;
+}
+
+#perfil:hover{
+    color:#FED641;
+    cursor:pointer;
+}
+
+#buscar{
+    display: flex;
+    padding: 0px;
+    margin: 0px;
+    height: 30px;
+    margin: 20px ;
 }
 
 #input_buscar{
-    width: 20vw;
-    height: 30px;
-    margin-top: 3vw;
-    margin-left: 10vw;
-
+    width: 300px;
+    height: 100%;
+    border: solid .5px;
+    padding: 0px 10px;
 }
 
 #btn_buscar{
     width: 80px;
-    height: 30px;
-    margin-top: 3vw;  
+    height: 100%;
     background: white;  
-    border: solid black 1px;
+    border: solid black 1px; 
+    padding: 0px;
+    cursor: pointer;
 }
 
 
@@ -46,20 +71,3 @@ header{
     margin-top: 20px;
 }
 
-#subtitulo{
-    width: fit-content;
-    height: 30px;
-    background: black;
-    color: white;
-    font-size: 25px;
-    text-align: center;
-    padding: 0px 2vw;
-}
-
-.linea{
-    border: solid .7px black;
-    padding: 0px;
-    width: 100%;
-    height: 0px;
-    margin: 0px;
-}

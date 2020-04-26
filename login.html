@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <center><table>
+        <tr>
+            <td>
+                <form method="post" action="iniciarSesionUsuario.php"> 
+                    <h3>Protein-Mix</h3>
+                    <!--Nombre Usuario-->
+                    <label for="nombre">Nombre</label><br>
+                    <input type="text" name="username" maxlength="32" placeholder="Nombre" required>
+                    <br/>
+                    <br/>
+                    <!--Contraseña-->
+                    <label for="contraseña">Contraseña</label><br>
+                    <input type="password" name="password" maxlength="8" placeholder="Contraseña" required>
+                    <h5>*Combinación de números, mayúsculas y símbolos especiales</h5>
+                    <input type="submit" name="submit" value="Iniciar sesión">
+                </form>
+            </td>
+        </tr>
+    </table></center>
+</body>
+</html>
