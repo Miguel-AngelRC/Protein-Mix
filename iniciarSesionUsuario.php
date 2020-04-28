@@ -1,6 +1,6 @@
 <?php
     $host_db = "localhost";
-    $usuario_db = "root";
+    $usuario_db = "edumilo";
     $contraseña_db = "980919";
     $nombrebd = "protein_mix";
     $nombretabla = "usuario";
@@ -26,7 +26,6 @@
     else{
         echo "<script>
                 alert('No se encuentra en nuestro registro. Por favor intente de nuevo.');
-                window.locationf='login.html\';
             </script>";//ventana emergente
     }
     

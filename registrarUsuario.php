@@ -1,6 +1,6 @@
-<?php
+﻿<?php
     $host_db = "localhost";
-    $usuario_db = "root";
+    $usuario_db = "edumilo";
     $contraseña_db = "980919";
     $nombrebd = "protein_mix";
     $nombretabla = "usuario";

@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS `protein_mix`.`Usuario` (
   `calle` VARCHAR(10) NOT NULL,
   `numero` VARCHAR(5) NOT NULL,
   `correo` VARCHAR(40) NOT NULL,
-  `contraseña` VARCHAR(20) NOT NULL,
+  `contrasena` VARCHAR(20) NOT NULL,
   PRIMARY KEY (`idUsuario`))
 ENGINE = InnoDB;
 
