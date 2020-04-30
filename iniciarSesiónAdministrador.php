@@ -1,18 +1,18 @@
 <?php
-    /*header('Content-Type: text/html;charset=utf-8');*/
-    
+    /*header("Content-Type: text/html;charset=utf-8");*/
+
     $host_db = "localhost";
     $usuario_db = "edumilo";
     $contraseña_db = "980919";
     $nombrebd = "protein_mix";
-    $nombretabla = "usuario";
-    
+    $nombretabla = "administrador";
+
     $conexion = new mysqli($host_db, $usuario_db, $contraseña_db, $nombrebd);
     /*mysql_set_charset('utf8', $conexion);*/
     if ($conexion->connect_error) {
         die("La conexion falló: " . $conexion->connect_error);
     }
-    
+    mysqli_set_charset($c, "utf8");//añadido
     //Consulta enviada a la base de datos
     $result = mysqli_query($conexion, "SELECT contrasena FROM $nombretabla WHERE nombre = '$_POST[username]'");
     
@@ -28,8 +28,8 @@
     }
     else{
         echo "<script>
-                alert('No se encuentra en nuestro registro. Por favor intente de nuevo.');
-            </script>";//ventana emergente
+            alert('No se encuentra en nuestro registro. Por favor intente de nuevo.');
+        </script>";//ventana emergente
     }
     
     /*$buscarUsuario = "SELECT nombre, contrasena FROM $nombretabla WHERE  nombre = '$_POST[username]'";

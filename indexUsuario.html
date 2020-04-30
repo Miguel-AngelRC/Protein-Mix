@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar usuario</title>
+</head>
+<body>
+    <center><table>
+        <tr>
+            <td>
+                <form method="post" action="registrarUsuario.php"> 
+                    <h3>Protein-Mix</h3>
+                    <!--Nombre Usuario-->
+                    <label for="nombre">Nombre</label><br>
+                    <input type="text" name="username" maxlength="50" required>
+                    <br/>
+                    <br/>
+                    <!--Apellidos-->
+                    <label for="apellidos">Apellidos</label><br>
+                    <input type="text" name="lastname" maxlength="50" required>
+                    <br/>
+                    <br/>
+                    <!--Dirección-->
+                    <label for="ciudad">Dirección</label><br>
+                    <input type="text" name="city" maxlength="50" required>&nbsp;&nbsp;<input type="text" name="street" maxlength="50" required>&nbsp;&nbsp;<input type="text" name="number" maxlength="50" required>
+                    <br/>
+                    <label for="ciudad">Ciudad</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label for="calle">Calle</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label for="numero">Numero</label>
+                    <br/>
+                    <br/>
+                    <!--Correo-->
+                    <label for="correo">Correo</label><br>
+                    <input type="email" name="email" maxlength="50" required>
+                    <br/>
+                    <br/>
+                    <!--Contraseña-->
+                    <label for="contraseña">Contraseña</label><br>
+                    <input type="password" name="password" maxlength="8" required>
+                    <h5>*Combinación de números, mayúsculas y símbolos especiales</h5>
+                    <br/>
+                    <br/>
+                    <input type="submit" name="submit" value="Registrarse">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="login.html"></a><button>Iniciar sesión</button>
+                </form>
+            </td>
+        </tr>
+    </table></center>
+</body>
+</html>
