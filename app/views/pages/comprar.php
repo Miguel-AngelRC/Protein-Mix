@@ -7,12 +7,12 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-        <link rel="stylesheet" href="css/encabezado.css">   
-        <link rel="stylesheet" href="css/contenido.css"> 
-        <link rel="stylesheet" href="css/pie.css">
+        <link rel="stylesheet" href="<?php echo RUTA_URL;?>/css/encabezado.css">   
+        <link rel="stylesheet" href="<?php echo RUTA_URL;?>/css/cuadroCompra.css"> 
+        <link rel="stylesheet" href="<?php echo RUTA_URL;?>/css/pie.css">
         <!-- Estilos del banner -->
-        <link rel="stylesheet" href="css/materialize.css">
-        <link rel="stylesheet" href="css/estilosBanner.css">
+        <link rel="stylesheet" href="<?php echo RUTA_URL;?>/css/materialize.css">
+        <link rel="stylesheet" href="<?php echo RUTA_URL;?>/css/estilosBanner.css">
 
         <!-- Fuente -->
         <!-- <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet"> -->
@@ -27,7 +27,7 @@
     </header>
 
     <nav id="menu">
-        <a id="inicio" href=paginaPrincipal.html">Inicio</a>
+        <a id="inicio" href="">Inicio</a>
         <a id="perfil" href="#">Perfil</a>
     </nav>
 
@@ -46,21 +46,21 @@
                     <div class="carousel center-align" >
 
                         <div class="carousel-item">
-                            <img src="img/vitaminaC.jpg" alt="vitaminaC">
+                            <img src="<?php echo RUTA_URL;?>/img/vitaminaC.jpg" alt="vitaminaC">
                             <h2 class="nomProducto">vitamina C</h2>
                             <div class="linea-division"></div>
                             <p class="texto">Ayuda a formar colágeno y tejidos, es el antioxidante por excelencia, ayuda a formar neurotransmisores y mejora la depresión estacional.</p>
                         </div> 
                         
                         <div class="carousel-item">
-                            <img src="img/vitaminaC.jpg" alt="vitaminaC">
+                            <img src="<?php echo RUTA_URL;?>/img/vitaminaC.jpg" alt="vitaminaC">
                             <h2 class="nomProducto">vitamina C</h2>
                             <div class="linea-division"></div>
                             <p class="texto">Ayuda a formar colágeno y tejidos, es el antioxidante por excelencia, ayuda a formar neurotransmisores y mejora la depresión estacional.</p>
                         </div> 
 
                         <div class="carousel-item">
-                            <img src="img/vitaminaC.jpg" alt="vitaminaC">
+                            <img src="<?php echo RUTA_URL;?>/img/vitaminaC.jpg" alt="vitaminaC">
                             <h2 class="nomProducto">vitamina C</h2>
                             <div class="linea-division"></div>
                             <p class="texto">Ayuda a formar colágeno y tejidos, es el antioxidante por excelencia, ayuda a formar neurotransmisores y mejora la depresión estacional.</p>
@@ -72,10 +72,12 @@
     </section>
 
     <!--------------------------- Terjetas ------------------------->
-    <section class="contenedor_tarjeta">
             
-            <h1 id="subtitulo">Todas las categorías</h1>
-            <div class="linea"></div>
+            
+        
+    <section class="contenedor_tarjeta">
+        <h1 id="subtitulo">Comprar</h1>
+        <div class="linea"></div>
 
         <article class="tarjeta">
             <div class="descripcion">
@@ -86,74 +88,30 @@
                     previene las cataratas, previene la arterioesclerosis y 
                     ayuda a reducir el colesterol.
                 </p>
-                <a class="verMas" href=""><div>Ver más</div></a>
+                <a class="opciones agregar" href="<?php echo RUTA_URL;?>/Paginas_Controller/construccion">Agregar</a>
+                <a class="opciones quitar" href="<?php echo RUTA_URL;?>/Paginas_Controller/construccion">Quitar</a>
+                <a class="opciones comprar" href="<?php echo RUTA_URL;?>/Paginas_Controller/construccion">Comprar</a>
             </div>
-            <img class="img_producto" src="img/vitaminaC.jpg" alt="Vitamina C">
-            
-        </article>            
-            <article class="tarjeta">
-                <div class="descripcion">
-                    <h2>Vitamina C</h2>
-                    <p> Ayuda a formar colágeno y tejidos,
-                    es el antioxidante por excelencia, ayuda a formar neurotransmisores 
-                    y mejora la depresión estacional, mejora la salud de la vista y 
-                    previene las cataratas, previene la arterioesclerosis y 
-                    ayuda a reducir el colesterol.
-                    </p>
-                    <a class="verMas" href="">Ver más</a>
-                </div>
-                <img class="img_producto" src="img/vitaminaC.jpg" alt="Vitamina C">      
-            </article>
-    </section>  
-
-    <section class="contenedor_tarjeta">
-
-    <article class="tarjeta">
-        <div class="descripcion">
-            <h2>Vitamina C</h2>
-            <p> Ayuda a formar colágeno y tejidos,
-                es el antioxidante por excelencia, ayuda a formar neurotransmisores 
-                y mejora la depresión estacional, mejora la salud de la vista y 
-                previene las cataratas, previene la arterioesclerosis y 
-                ayuda a reducir el colesterol.
-            </p>
-            <a class="verMas" href="">Ver más</a>
-        </div>
-        <img class="img_producto" src="img/vitaminaC.jpg" alt="Vitamina C">
+            <img class="img_producto" src="<?php echo RUTA_URL;?>/img/vitaminaC.jpg" alt="Vitamina C">
         
-    </article>
-
-    <article class="tarjeta">
-        <div class="descripcion">
-            <h2>Vitamina C</h2>
-            <p> Ayuda a formar colágeno y tejidos,
-                es el antioxidante por excelencia, ayuda a formar neurotransmisores 
-                y mejora la depresión estacional, mejora la salud de la vista y 
-                previene las cataratas, previene la arterioesclerosis y 
-                ayuda a reducir el colesterol.
-            </p>
-            <a class="verMas" href="">Ver más</a>
-        </div>
-
-        <img class="img_producto" src="img/vitaminaC.jpg" alt="Vitamina C">            
-    </article>
-</section>  
+        </article>
+    </section>  
 
 <!--------------------------- pie de pagina ------------------------->
 
 <footer>
     <h2>Siguenos</h2>
     <div id="redes">
-        <a href=""><img src="img/facebook.png" alt="facebook"></a>
-        <a href=""><img src="img/instagram.png" alt="instagram"></a>
-        <a href=""><img src="img/whatsapp.png" alt="whatsapp"></a>
+        <a href=""><img src="<?php echo RUTA_URL;?>/img/facebook.png" alt="facebook"></a>
+        <a href=""><img src="<?php echo RUTA_URL;?>/img/instagram.png" alt="instagram"></a>
+        <a href=""><img src="<?php echo RUTA_URL;?>/img/whatsapp.png" alt="whatsapp"></a>
         <a href=""><p>Conócenos más</p></a>
     </div>
 </footer>
 
 <!--------------------------- Invocar scripts ------------------------->
-<script src="js/materialize.js"></script> <!-- JS de materialize -->
-<script src="js/bannerConf.js"></script> <!-- JS de banner -->
+<script src="<?php echo RUTA_URL;?>/js/materialize.js"></script> <!-- JS de materialize -->
+<script src="<?php echo RUTA_URL;?>/js/bannerConf.js"></script> <!-- JS de banner -->
 
 </body>
 </html>

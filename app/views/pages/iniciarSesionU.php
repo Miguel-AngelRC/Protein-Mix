@@ -1,15 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-</head>
-<body>
-    <center><table>
+<!-- se carga la cabecera -->
+<?php require_once RUTA_APP.'/views/inc/header.php';?>
+<center><table>
         <tr>
             <td>
-                <form method="post" action="iniciarSesionUsuario.php"> 
+                <form method="post" action="http://localhost/Protein-Mix/IniciarSesionU_Controller/validarRegistro"> 
                     <h3>Protein-Mix</h3>
                     <!--Nombre Usuario-->
                     <label for="nombre">Nombre</label><br>
@@ -25,5 +19,5 @@
             </td>
         </tr>
     </table></center>
-</body>
-</html>
+<!-- se carga el pie de pagina -->
+<?php require_once RUTA_APP.'/views/inc/footer.php';?>
