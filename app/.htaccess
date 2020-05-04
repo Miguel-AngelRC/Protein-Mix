@@ -1,0 +1,6 @@
+#Configuracion para que no pueden acceder a la carpeta app desde el navegador
+#Si se cambia el - por + la carpeta sera visible
+options  -Indexes  
+
+
+

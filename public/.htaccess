@@ -1,0 +1,10 @@
+<IfModule mod_rewrite.c>
+Options -Multiviews
+RewriteEngine On 
+RewriteBase /Protein-Mix/public
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
+</IfModule>
+
+#Códifo para redireccionar a index.php dentro de public si es que no existe una página

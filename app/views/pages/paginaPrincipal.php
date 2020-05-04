@@ -7,6 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
+
     <link rel="stylesheet" href="css/encabezado.css">   
     <link rel="stylesheet" href="css/contenido.css"> 
     <link rel="stylesheet" href="css/pie.css">
@@ -17,6 +18,17 @@
     <!-- Fuente -->
     <!-- <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet"> -->
     <!-- <link href="https://fonts.googleapis.com/css?family=Bree+Serif&display=swap" rel="stylesheet"> -->
+
+        <link rel="stylesheet" href="<?php echo RUTA_URL;?>/css/encabezado.css">   
+        <link rel="stylesheet" href="<?php echo RUTA_URL;?>/css/contenido.css"> 
+        <link rel="stylesheet" href="<?php echo RUTA_URL;?>/css/pie.css">
+        <!-- Estilos del banner -->
+        <link rel="stylesheet" href="<?php echo RUTA_URL;?>/css/materialize.css">
+        <link rel="stylesheet" href="<?php echo RUTA_URL;?>/css/estilosBanner.css">
+
+        <!-- Fuente -->
+        <!-- <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet"> -->
+        <!-- <link href="https://fonts.googleapis.com/css?family=Bree+Serif&display=swap" rel="stylesheet"> -->
         
     <title>Protein-Mix</title>
 </head>      
@@ -27,7 +39,7 @@
     </header>
 
     <nav id="menu">
-        <a id="inicio" href=paginaPrincipal.html">Inicio</a>
+        <a id="inicio" href="<?php echo RUTA_URL;?>/Paginas_Controller">Inicio</a>
         <a id="perfil" href="#">Perfil</a>
     </nav>
 
@@ -46,21 +58,21 @@
                     <div class="carousel center-align" >
 
                         <div class="carousel-item">
-                            <img src="img/vitaminaC.jpg" alt="vitaminaC">
+                            <img src="<?php echo RUTA_URL;?>/img/vitaminaC.jpg" alt="vitaminaC">
                             <h2 class="nomProducto">vitamina C</h2>
                             <div class="linea-division"></div>
                             <p class="texto">Ayuda a formar colágeno y tejidos, es el antioxidante por excelencia, ayuda a formar neurotransmisores y mejora la depresión estacional.</p>
                         </div> 
                         
                         <div class="carousel-item">
-                            <img src="img/vitaminaC.jpg" alt="vitaminaC">
+                            <img src="<?php echo RUTA_URL;?>/img/vitaminaC.jpg" alt="vitaminaC">
                             <h2 class="nomProducto">vitamina C</h2>
                             <div class="linea-division"></div>
                             <p class="texto">Ayuda a formar colágeno y tejidos, es el antioxidante por excelencia, ayuda a formar neurotransmisores y mejora la depresión estacional.</p>
                         </div> 
 
                         <div class="carousel-item">
-                            <img src="img/vitaminaC.jpg" alt="vitaminaC">
+                            <img src="<?php echo RUTA_URL;?>/img/vitaminaC.jpg" alt="vitaminaC">
                             <h2 class="nomProducto">vitamina C</h2>
                             <div class="linea-division"></div>
                             <p class="texto">Ayuda a formar colágeno y tejidos, es el antioxidante por excelencia, ayuda a formar neurotransmisores y mejora la depresión estacional.</p>
@@ -85,9 +97,9 @@
                     previene las cataratas, previene la arterioesclerosis y 
                     ayuda a reducir el colesterol.
                 </p>
-                <a class="verMas" href=""><div>Ver más</div></a>
+                <a class="verMas" href="<?php echo RUTA_URL;?>/Paginas_Controller/categoria"><div>Ver más</div></a>
             </div>
-            <img class="img_producto" src="img/vitaminaC.jpg" alt="Vitamina C">
+            <img class="img_producto" src="<?php echo RUTA_URL;?>/img/vitaminaC.jpg" alt="Vitamina C">
             
         </article>            
             <article class="tarjeta">
@@ -99,9 +111,9 @@
                     previene las cataratas, previene la arterioesclerosis y 
                     ayuda a reducir el colesterol.
                     </p>
-                    <a class="verMas" href="">Ver más</a>
+                    <a class="verMas" href="<?php echo RUTA_URL;?>/Paginas_Controller/categoria">Ver más</a>
                 </div>
-                <img class="img_producto" src="img/vitaminaC.jpg" alt="Vitamina C">      
+                <img class="img_producto" src="<?php echo RUTA_URL;?>/img/vitaminaC.jpg" alt="Vitamina C">      
             </article>
     </section>  
 
@@ -115,7 +127,7 @@
                     previene las cataratas, previene la arterioesclerosis y 
                     ayuda a reducir el colesterol.
                 </p>
-                <a class="verMas" href="">Ver más</a>
+                <a class="verMas" href="<?php echo RUTA_URL;?>/Paginas_Controller/categoria">Ver más</a>
             </div>
             <img class="img_producto" src="img/vitaminaC.jpg" alt="Vitamina C">
         </article>
@@ -129,25 +141,28 @@
                     previene las cataratas, previene la arterioesclerosis y 
                     ayuda a reducir el colesterol.
                 </p>
-                <a class="verMas" href="">Ver más</a>
+                <a class="verMas" href="<?php echo RUTA_URL;?>/Paginas_Controller/categoria">Ver más</a>
             </div>
             <img class="img_producto" src="img/vitaminaC.jpg" alt="Vitamina C">            
         </article>
     </section>  
 
-    <!--------------------------- pie de pagina ------------------------->
-    <footer>
-        <h2>Siguenos</h2>
-        <div id="redes">
-            <a href="https://www.facebook.com/ProteinMixPM" target="_blank"><img src="img/facebook.png" alt="facebook"></a>
-            <a href="https://www.instagram.com/pm_mix/?hl=es-la" target="_blank"><img src="img/instagram.png" alt="instagram"></a>
-            <a href=""><img src="img/whatsapp.png" alt="whatsapp"></a>
-            <a href=""><p>Conócenos más</p></a>
-        </div>
-    </footer>
 
-    <!--------------------------- Invocar scripts ------------------------->
-    <script src="js/materialize.js"></script> <!-- JS de materialize -->
-    <script src="js/bannerConf.js"></script> <!-- JS de banner -->
+<!--------------------------- pie de pagina ------------------------->
+
+<footer>
+    <h2>Siguenos</h2>
+    <div id="redes">
+        <a href="https://www.facebook.com/ProteinMixPM"><img src="<?php echo RUTA_URL;?>/img/facebook.png" alt="facebook"></a>
+        <a href="https://www.instagram.com/pm_mix/?hl=es-la"><img src="<?php echo RUTA_URL;?>/img/instagram.png" alt="instagram"></a>
+        <a href=""><img src="<?php echo RUTA_URL;?>/img/whatsapp.png" alt="whatsapp"></a>
+        <a href=""><p>Conócenos más</p></a>
+    </div>
+</footer>
+
+<!--------------------------- Invocar scripts ------------------------->
+<script src="<?php echo RUTA_URL;?>/js/materialize.js"></script> <!-- JS de materialize -->
+<script src="<?php echo RUTA_URL;?>/js/bannerConf.js"></script> <!-- JS de banner -->
+
 </body>
 </html>
