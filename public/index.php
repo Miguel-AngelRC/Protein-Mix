@@ -9,6 +9,4 @@
     $iniciar = new Core;
 
 
-    //
-    echo '{}' > composer.json;
 ?>
