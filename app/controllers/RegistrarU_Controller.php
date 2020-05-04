@@ -1,13 +1,14 @@
 <?php
 
     class RegistrarU_Controller extends Controller{
+        
         public function  __construct (){
             $this->vista('pages/index');
         }
 
         //carga pagina index (registrar usuarios) metodo por default
         public function index(){
-            //$this->vista('pages/index');
+
         }
 
         //Registra usuario
@@ -27,11 +28,6 @@
                         $this->vista('pages/index');
                     }
             }
-
-            
         }
-
-
-
     }
 ?>

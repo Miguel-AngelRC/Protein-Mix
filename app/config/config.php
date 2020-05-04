@@ -4,11 +4,13 @@
     *****************************/
 
     //Ruta de la aplicación
+    
     define('RUTA_APP',dirname(dirname(__FILE__)));
 
     //Ruta url
-    define('RUTA_URL','http://protein-mix.myvnc.com/Protein-Mix'); //ruta para servidor
-    //define('RUTA_URL','http://localhost/Protein-Mix');//ruta cuando se esta desarrollando
+    //define('RUTA_URL','http://protein-mix.myvnc.com/Protein-Mix'); //ruta para servidor
+    define('RUTA_URL','http://localhost/Protein-Mix');//ruta cuando se esta desarrollando
+    
     define('NOMBRE_SITIO','PROTEIN-MIX');
 
     //Configuración a la base de datos

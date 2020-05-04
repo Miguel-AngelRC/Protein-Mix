@@ -1,5 +1,4 @@
 <?php
-
     class IniciarSesionU_Controller extends Controller{
         public function  __construct (){
             $this->vista('pages/iniciarSesionU');
@@ -26,6 +25,5 @@
                         $this->vista('pages/iniciarSesionU');
             }
         }
-
     }
 ?>

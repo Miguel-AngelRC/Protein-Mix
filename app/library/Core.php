@@ -17,6 +17,7 @@
          public function __construct(){
             $url = $this->getUrl();
    
+            
             //buscar en carpeta controllers si el controlador existe
             if(file_exists('../app/controllers/'.ucwords($url[0]).'.php')){//ucwords convierte la primera letra en mayuscula
                //si existe se cambia el controlador por defecto
@@ -43,7 +44,7 @@
             }
 
             //Si existe obtener parametros
-            $this->parametros = $url ? array_values($url): []; //pasa los valores del arreglo url a parametros si no hay valores lo deja vacio    
+            $this->parametros = $url ? array_values($url) : []; //pasa los valores del arreglo url a parametros si no hay valores lo deja vacio    
 
             call_user_func_array([$this->controladorActual,$this->metodoActual],$this->parametros);            
          }

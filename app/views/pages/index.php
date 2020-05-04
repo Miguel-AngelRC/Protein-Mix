@@ -4,8 +4,7 @@
         <table>
             <tr>
                 <td>
-                    <form method="post" action="<?php echo RUTA_URL;?>/RegistrarU_Controller/RegistrarUsuario"> 
-                        
+                    <form method="post" action="<?php echo RUTA_URL;?>/RegistrarU_Controller/RegistrarUsuario">  
                         
                     <h3>Protein-Mix</h3>
                         <!--Nombre Usuario-->
