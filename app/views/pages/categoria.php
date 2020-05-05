@@ -27,7 +27,7 @@
     </header>
 
     <nav id="menu">
-        <a id="inicio" href=>Inicio</a>
+        <a id="inicio" href="<?php echo RUTA_URL;?>/Paginas_Controller/index">Inicio</a>
         <a id="perfil" href="#">Perfil</a>
     </nav>
 
@@ -167,9 +167,8 @@
                 </p>
                 <a class="verMas" href="<?php echo RUTA_URL;?>/Paginas_Controller/comprar">Comprar</a>
             </div>
-
                 <img class="img_producto" src="<?php echo RUTA_URL;?>/img/vitaminaC.jpg" alt="Vitamina C">            
-            </article>
+        </article>
     </section>  
 
 <!--------------------------- pie de pagina ------------------------->
