@@ -28,7 +28,7 @@ ENGINE = InnoDB;
 -- Table `protein_mix`.`Compra`	
 -- -----------------------------------------------------	
 CREATE TABLE IF NOT EXISTS `protein_mix`.`Compra` (	
-  `idCompra` INT NOT NULL,	
+  `idCompra` INT NOT NULL auto_increment,	
   `hora` DATE NOT NULL,	
   `numeroTarjeta` VARCHAR(20) NOT NULL,	
   `idUsuario` INT NOT NULL,	
@@ -50,7 +50,7 @@ ENGINE = InnoDB;
 -- Table `protein_mix`.`Categoria`	
 -- -----------------------------------------------------	
 CREATE TABLE IF NOT EXISTS `protein_mix`.`Categoria` (	
-  `idCategoria` INT NOT NULL,	
+  `idCategoria` INT NOT NULL auto_increment,	
   `nombreCategoria` VARCHAR(10) NULL,	
   `descripcion` VARCHAR(100) NULL,	
   PRIMARY KEY (`idCategoria`))	

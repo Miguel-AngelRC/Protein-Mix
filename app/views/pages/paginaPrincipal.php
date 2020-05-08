@@ -39,7 +39,7 @@
     </header>
 
     <nav id="menu">
-        <a id="inicio" href="<?php echo RUTA_URL;?>/Paginas_Controller/index">Inicio</a>
+        <a id="inicio" href="<?php echo RUTA_URL;?>d/index">Inicio</a>
         <a id="perfil" href="#">Perfil</a>
     </nav>
 

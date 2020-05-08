@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=7">
     <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
     <link rel="stylesheet" type="text/css" href="<?php echo RUTA_URL;?>/css/estilos.css?v=<?php echo(rand()); ?>">
-    <link rel="stylesheet" type="text/css" href="<?php echo RUTA_URL;?>/css/estilo_RegistrarLogin.css?v=<?php echo(rand()); ?>">
     <title><?php echo NOMBRE_SITIO;?></title>
 </head>
 <body>

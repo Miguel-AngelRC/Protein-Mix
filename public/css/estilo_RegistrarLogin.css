@@ -1,0 +1,124 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;;
+    color: #4b4a4a;
+}
+
+#contendorFormulario{
+    width: 400px;
+    height: 100vh;
+    margin: 0px auto;
+}
+
+
+#logo{
+    width: 180px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -100px;
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.582) 1px 1px 10px;
+}
+
+/*Formulario para sesion*/
+#formSesion{
+    box-shadow: rgba(0, 0, 0, 0.712) 1px 1px 10px;
+    margin: 0px auto;
+    padding: 50px 10px 0px 10px;
+    position: relative;
+    top: 40%;
+    transform: translateY(-45%);
+    width: 90%;
+    height: 60%;
+}
+
+/*Formulario para Registrar*/
+#formRegistrar{
+    box-shadow: rgba(0, 0, 0, 0.712) 1px 1px 10px;
+    margin: 0px auto;
+    padding: 50px 10px 0px 10px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-45%);
+    width: 90%;
+    height: 80%;
+}
+
+/* texto de contraseña */
+form p{
+    font-size: 11px;
+}
+
+label{
+    margin: 20px 0px 0px 0px;
+    display: block;
+    width: 60%;
+    
+}
+
+input{
+    margin: 0px 0px 0px 0px;
+    display: block;
+    width: 60%;
+    border: rgb(185, 185, 185) 1px solid;
+}
+
+/**** Campos de direccion ****/
+
+ /*contenedor de los campos*/
+#direccion {
+    margin-top: 20px;
+    display: inline-block;
+}
+
+/*contendor de cada campo*/
+.campos{
+    display: inline-block ;
+    text-align: center;
+    width: 25%;
+    margin: 10px 10px 0px 10px;
+}
+
+#direccion h1{
+    width: fit-content;
+    font-size: 16px;
+    font-weight: normal;
+}
+#direccion label{
+    display: block;
+    margin: 0px;
+    width: 100%;
+}
+
+#direccion input{
+    display: inline-block;
+    margin: 0px;
+    width: 100%;
+}
+
+/*Botón registrar y iniciar sesion*/
+
+#btnRegistrar,#btnSesion{
+    width: 30%;
+    height: 30px;
+    position: absolute;
+    bottom: 40px;
+    right: 10px;
+    background-color: #FED641;
+    border: solid 1px #948654;
+    cursor: pointer;
+
+}
+
+#irSesion,#irRegistrar{
+    text-align: center  ;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    text-decoration: none;
+    color: #868282;
+    font-size: 14px;
+}
