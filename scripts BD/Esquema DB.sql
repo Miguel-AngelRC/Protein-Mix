@@ -4,13 +4,13 @@ create database protein_mix;
 -- -----------------------------------------------------	
 CREATE TABLE IF NOT EXISTS `protein_mix`.`Usuario` (	
   `idUsuario` INT NOT NULL auto_increment,	
-  `nombre` VARCHAR(30) NOT NULL,	
-  `apellidos` VARCHAR(30) NOT NULL,	
-  `ciudad` VARCHAR(20) NOT NULL,	
-  `calle` VARCHAR(10) NOT NULL,	
-  `numero` VARCHAR(5) NOT NULL,	
-  `correo` VARCHAR(40) NOT NULL,	
-  `contrasena` VARCHAR(20) NOT NULL,	
+  `nombre` VARCHAR(50) NOT NULL,	
+  `apellidos` VARCHAR(50) NOT NULL,	
+  `ciudad` VARCHAR(50) NOT NULL,	
+  `calle` VARCHAR(50) NOT NULL,	
+  `numero` VARCHAR(50) NOT NULL,	
+  `correo` VARCHAR(50) NOT NULL,	
+  `contrasena` VARCHAR(200) NOT NULL,	
   PRIMARY KEY (`idUsuario`))	
 ENGINE = InnoDB;	
 
@@ -19,8 +19,8 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------	
 CREATE TABLE IF NOT EXISTS `protein_mix`.`VentaDiaria` (	
   `idVentaDiaria` INT NOT NULL,	
-  `totalComprasD` FLOAT NOT NULL,	
-  `fecha` DATE NOT NULL,	
+  `totalComprasD` FLOAT NULL,	
+  `fecha` DATE NULL,	
   PRIMARY KEY (`idVentaDiaria`))	
 ENGINE = InnoDB;	
 
@@ -29,10 +29,11 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------	
 CREATE TABLE IF NOT EXISTS `protein_mix`.`Compra` (	
   `idCompra` INT NOT NULL auto_increment,	
-  `hora` DATE NOT NULL,	
-  `numeroTarjeta` VARCHAR(20) NOT NULL,	
+  `hora` TIME NOT NULL,	
+  `numeroTarjeta` VARCHAR(30) NOT NULL,	
   `idUsuario` INT NOT NULL,	
-  `idVentaDiaria` INT NOT NULL,	
+  `idVentaDiaria` INT NOT NULL,
+  `totalDeLaCompra` FLOAT NULL,
   PRIMARY KEY (`idCompra`),	
   CONSTRAINT `fk_Compra_Usuario`	
     FOREIGN KEY (`idUsuario`)	
@@ -51,8 +52,8 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------	
 CREATE TABLE IF NOT EXISTS `protein_mix`.`Categoria` (	
   `idCategoria` INT NOT NULL auto_increment,	
-  `nombreCategoria` VARCHAR(10) NULL,	
-  `descripcion` VARCHAR(100) NULL,	
+  `nombreCategoria` VARCHAR(100) NULL,	
+  `descripcion` VARCHAR(300) NULL,	
   PRIMARY KEY (`idCategoria`))	
 ENGINE = InnoDB;	
 
@@ -61,8 +62,8 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------	
 CREATE TABLE IF NOT EXISTS `protein_mix`.`Producto` (	
   `idProducto` INT NOT NULL,	
-  `nombreProducto` VARCHAR(20) NOT NULL,	
-  `descripcion` VARCHAR(100) NOT NULL,	
+  `nombreProducto` VARCHAR(100) NOT NULL,	
+  `descripcion` VARCHAR(300) NOT NULL,	
   `precio` FLOAT NOT NULL,	
   `stock` INT NOT NULL,	
   `idCategoria` INT NOT NULL,	
@@ -75,20 +76,20 @@ CREATE TABLE IF NOT EXISTS `protein_mix`.`Producto` (
 ENGINE = InnoDB;	
 
 -- -----------------------------------------------------	
--- Table `protein_mix`.`Compra-Producto`	
+-- Table `protein_mix`.`Compra_Producto`	
 -- -----------------------------------------------------	
-CREATE TABLE IF NOT EXISTS `protein_mix`.`Compra-Producto` (	
+CREATE TABLE IF NOT EXISTS `protein_mix`.`Compra_Producto` (	
   `idCompra` INT NOT NULL,	
   `idProducto` INT NOT NULL,	
-  `cantidad` INT NOT NULL,	
-  `total` FLOAT NOT NULL,	
+  `cantidad` INT NULL,	
+  `total` FLOAT NULL,	
   PRIMARY KEY (`idCompra`, `idProducto`),	
-  CONSTRAINT `fk_Compra-Producto_Compra`	
+  CONSTRAINT `fk_Compra_Producto_Compra`	
     FOREIGN KEY (`idCompra`)	
     REFERENCES `protein_mix`.`Compra` (`idCompra`)	
     ON DELETE RESTRICT	
     ON UPDATE CASCADE,	
-  CONSTRAINT `fk_Compra-Producto_Producto`	
+  CONSTRAINT `fk_Compra_Producto_Producto`	
     FOREIGN KEY (`idProducto`)	
     REFERENCES `protein_mix`.`Producto` (`idProducto`)	
     ON DELETE RESTRICT	
