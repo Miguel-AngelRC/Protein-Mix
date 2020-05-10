@@ -1,4 +1,3 @@
-
 insert into protein_mix.categoria (nombreCategoria,descripcion) values
 ('Suplementacion en gomitas','¡Obtén los nutrientes de una manera fácil y deliciosa! Sólo consume 4 gomitas al día y empieza a cuidar tu salud.'),
 ('Infusiones herbales','Disfruta de una bebida rica y saludable en donde quieras.'),
