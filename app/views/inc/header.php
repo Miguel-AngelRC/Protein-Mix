@@ -1,12 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=7">
-    <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
-    <link rel="stylesheet" type="text/css" href="<?php echo RUTA_URL;?>/css/estilos.css?v=<?php echo(rand()); ?>">
-    <link rel="stylesheet" type="text/css" href="<?php echo RUTA_URL;?>/css/estilo_RegistrarLogin.css?v=<?php echo(rand()); ?>">
-    <title><?php echo NOMBRE_SITIO;?></title>
-</head>
-<body>
+<!-- Encabezado -->
+<header >
+        <h1 id="titulo">Protein-Mix</h1>
+</header>
+
+<!-- Menú de navegación -->
+<nav id="menu">
+    <ul>
+        <li id="inicio">
+          <a href="<?php echo RUTA_URL;?>/Paginas_Controller/index">Inicio</a>
+        </li>
+        <li id="perfil">
+            <a href=""> Perfil</a>
+            <ul id="sub_menu">
+                <li class="item" > <a href="<?php echo RUTA_URL;?>/"> Registrarse</a></li>
+                <li class="item"><a href="<?php echo RUTA_URL;?>/IniciarSesionU_Controller">Iniciar Sesión</a></li>
+                <li class="item"><a href="<?php echo RUTA_URL;?>/IniciarSesionU_Controller">Cerrar sesión</a></li>
+            </ul>  
+         </li>
+    </ul>
+</nav>
+
+<!-- Campo de busqueda -->
+<section id="buscar">
+    <form >
+        <input id="input_buscar" name="buscar" type="text" >
+            <input id="btn_buscar" type="button" value="Buscar">        
+        </form>
+</section>

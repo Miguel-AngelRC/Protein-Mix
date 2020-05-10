@@ -1,5 +1,17 @@
-<!-- se carga la cabecera -->
-<?php require_once RUTA_APP.'/views/inc/header.php';?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+    <link rel="stylesheet" type="text/css" href="<?php echo RUTA_URL;?>/css/estilo_RegistrarLogin.css?v=<?php echo(rand()); ?>">
+
+    <link rel="shortcut icon" href="<?php echo RUTA_URL;?>/img/proteinmix.ico" type="image/x-icon">
+    <title>Registro Protein-Mix</title>
+</head>
+<body>
+
     <div id="contendorFormulario">
         
         <form id="formRegistrar" method="post" action="<?php echo RUTA_URL;?>/RegistrarU_Controller/RegistrarUsuario">  
@@ -46,6 +58,6 @@
                 <a id="irSesion" href="<?php echo RUTA_URL;?>/IniciarSesionU_Controller">¿Ya estás registrado?</a>
          </form>
     </div>
-<!-- se carga el pie de pagina -->
-<?php require_once RUTA_APP.'/views/inc/footer.php';?>
 
+</body>
+</html>

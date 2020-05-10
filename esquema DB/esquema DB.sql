@@ -1,4 +1,6 @@
-create database protein_mix;	
+-- drop database protein_mix;
+
+-- create database protein_mix;	
 -- -----------------------------------------------------	
 -- Table `protein_mix`.`Usuario`	
 -- -----------------------------------------------------	
@@ -18,7 +20,7 @@ ENGINE = InnoDB;
 -- Table `protein_mix`.`VentaDiaria`	
 -- -----------------------------------------------------	
 CREATE TABLE IF NOT EXISTS `protein_mix`.`VentaDiaria` (	
-  `idVentaDiaria` INT NOT NULL,	
+  `idVentaDiaria` INT NOT NULL auto_increment,	
   `totalComprasD` FLOAT NOT NULL,	
   `fecha` DATE NOT NULL,	
   PRIMARY KEY (`idVentaDiaria`))	
@@ -51,8 +53,8 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------	
 CREATE TABLE IF NOT EXISTS `protein_mix`.`Categoria` (	
   `idCategoria` INT NOT NULL auto_increment,	
-  `nombreCategoria` VARCHAR(10) NULL,	
-  `descripcion` VARCHAR(100) NULL,	
+  `nombreCategoria` VARCHAR(100) NULL,	
+  `descripcion` VARCHAR(400) NULL,	
   PRIMARY KEY (`idCategoria`))	
 ENGINE = InnoDB;	
 
@@ -60,9 +62,9 @@ ENGINE = InnoDB;
 -- Table `protein_mix`.`Producto`	
 -- -----------------------------------------------------	
 CREATE TABLE IF NOT EXISTS `protein_mix`.`Producto` (	
-  `idProducto` INT NOT NULL,	
-  `nombreProducto` VARCHAR(20) NOT NULL,	
-  `descripcion` VARCHAR(100) NOT NULL,	
+  `idProducto` INT NOT NULL auto_increment,	
+  `nombreProducto` VARCHAR(100) NOT NULL,	
+  `descripcion` VARCHAR(400) NOT NULL,	
   `precio` FLOAT NOT NULL,	
   `stock` INT NOT NULL,	
   `idCategoria` INT NOT NULL,	

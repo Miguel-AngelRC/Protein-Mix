@@ -2,6 +2,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 /******************************************/
@@ -33,6 +34,8 @@
 .contenedor_tarjeta{
     padding: 10px 0px;
     margin: 0px;
+    display: flex;
+    justify-content: flex-start;
 }
 
 /*Estilo de tarjeta*/
@@ -45,7 +48,9 @@
     display: inline-block;
     box-shadow: black 1px 1px 5px;
     border-radius: 5px;
-    position: relative;;
+    position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 /*Estilos para descripcion de los productos*/
@@ -57,12 +62,12 @@
 }
 
 .descripcion h2{
-    font-size: 30px;
+    font-size: 20px;
     font-weight: bold;
     text-align: center;
     height: 15%;
     width: 100%;
-    margin: 0px;
+    margin: 5px 0px;
     position: relative;
     top: 0%;
 }
@@ -76,7 +81,7 @@
 }
 
 
-.descripcion .verMas{
+.descripcion .verMas,.btn-abrir-popup{
     text-align: center;
     font-size:  25px;
     height: 20%;
@@ -87,6 +92,12 @@
     text-decoration: none;
     color: black;
     padding: 0px;
+    cursor: pointer;
+}
+
+.descripcion .btn-abrir-popup{
+    background: #ff0000;
+    color: white;
 }
 
 .descripcion .verMas div{
@@ -99,6 +110,14 @@
     color: white;
 }
 
+.descripcion .precio{
+    font-size: 20px;
+    color: teal;
+    position: absolute;
+    padding: 0px 10px 5px 0px;
+    text-align: right;
+    bottom: 20%;
+}
 
 /*Estilos para imagen de los productos*/
 .img_producto{

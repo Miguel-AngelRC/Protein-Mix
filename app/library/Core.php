@@ -16,8 +16,7 @@
          //Constructor
          public function __construct(){
             $url = $this->getUrl();
-   
-            
+
             //buscar en carpeta controllers si el controlador existe
             if(file_exists('../app/controllers/'.ucwords($url[0]).'.php')){//ucwords convierte la primera letra en mayuscula
                //si existe se cambia el controlador por defecto

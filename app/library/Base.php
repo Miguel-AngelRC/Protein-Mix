@@ -69,6 +69,12 @@
             return $this->stmt->fetchAll(PDO::FETCH_OBJ);
         }
 
+        //Obtener los registros
+        public function columna(){
+            $this->execute();
+            return $this->stmt->fetchColumn(1);
+        }
+
         //Obtener un solo registro
         public function registro(){
             $this->execute();

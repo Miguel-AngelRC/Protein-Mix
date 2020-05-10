@@ -1,0 +1,123 @@
+header{
+    margin: 0px;
+    background: #FED641;
+    height: 100px;
+}
+
+#titulo{
+    text-align: center;
+    color: #fff;
+    font-size: 80px;
+    margin: 0px;
+}
+
+
+#menu{
+    font-size: 25px;
+    overflow: visible;
+    background: white;
+    height: 50px;
+    position: relative;
+    padding-bottom: 2px;
+}
+#menu ul{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#inicio,#perfil{
+    margin-left: 10px;
+    height: 48px;
+}
+
+#inicio a, #perfil a{
+    height: 50px;
+    margin-left: 10px;
+    color: black;
+    font-size: 25px;
+    text-align: center;
+}
+
+#inicio a:hover, #perfil a:hover{
+    color:#FED641;
+    cursor:pointer;
+    background-color: white;
+}
+
+
+#sub_menu{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    color: black;
+    width: 80px;
+    height: 105px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity .3s;  
+    visibility: hidden;
+}
+
+#perfil:hover #sub_menu,#item{
+    opacity: 1; 
+    visibility: visible;
+}
+
+#sub_menu .item a{
+    height: 35px;
+    width: 80px;
+    padding: 1px;
+    padding: 0px;
+    margin: 2px;
+    font-size: 12px;
+    color: black; 
+    border: 1px solid #FED641 ;
+    line-height: 30px;
+    text-align: center;
+    display: block;
+}
+
+#sub_menu .item a:hover{
+    color:#FED641;
+}
+
+
+
+#perfil:hover{
+    color:#FED641;
+    cursor:pointer;
+}
+
+#buscar{
+    display: flex;
+    padding: 0px;
+    margin: 0px;
+    height: 30px;
+    margin: 20px ;
+}
+
+#input_buscar{
+    width: 300px;
+    height: 100%;
+    border: solid .5px;
+    padding: 0px 10px;
+}
+
+#btn_buscar{
+    width: 80px;
+    height: 100%;
+    background: white;  
+    border: solid black 1px; 
+    padding: 0px;
+    cursor: pointer;
+}
+
+
+#categorias{
+    margin-top: 20px;
+}
+
