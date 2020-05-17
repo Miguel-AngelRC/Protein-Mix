@@ -98,10 +98,12 @@
 .descripcion .btn-abrir-popup{
     background: #ff0000;
     color: white;
+    border-radius: 2px;
 }
 
 .descripcion .verMas div{
     width: 100%;
+    border-radius: 2px;
 }
 
 
@@ -122,8 +124,7 @@
 /*Estilos para imagen de los productos*/
 .img_producto{
     float: left;
-    width: 50%;
+    width: 45%;
     height: 100%;
     object-fit: cover;
-
 }

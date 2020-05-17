@@ -40,7 +40,7 @@
 }
 
 .carousel .carousel-item img {
-    height: 70%;
+    width: 50%;
     object-fit: cover;
     border-radius: 15px;
 }

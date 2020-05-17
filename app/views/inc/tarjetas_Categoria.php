@@ -4,32 +4,34 @@
     <div class="linea"></div>
 
 <?php //ciclo para imprimir todas las terjetas
-    $i=1;//control de id
+  
     $datosTarjeta;
-    do{
+    $categorias = $this->idCategorias();
+    $i=0;//control de id
+    while ($i<count($categorias)){
 ;?>
     <section class="contenedor_tarjeta"> 
     <?php 
         //ciclo para imprimir  dos tarjetas en el section
         for ($j=1;$j<=2;$j++,$i++){
+            if($i<count($categorias)){
         //se obtienen datos y si esta vacio se evalua
-        $datosTarjeta = $this->tarjetasCategoria($i);  
-        
-        if($datosTarjeta["seguir"]){
+        $datosTarjeta = $this->tarjetasCategoria($categorias[$i]);   
     ?>
 
+    <!-- Escribe tarejeta -->
         <article class="tarjeta">
             <div class="descripcion">
                 <h2><?php echo$datosTarjeta["titulo"]?></h2>
                 <p> <?php echo$datosTarjeta["descripcion"]?></p>
-                <a class="verMas" href="<?php echo RUTA_URL;?>/Paginas_Controller/categoria/<?php echo $i?>"><div>Ver más</div></a>
+                <a class="verMas" href="<?php echo RUTA_URL;?>/Paginas_Controller/categoria/<?php echo $categorias[$i];?>"><div>Ver más</div></a>
             </div>
-            <img class="img_producto" src="<?php echo RUTA_URL;?>/img/vitaminaC.jpg" alt="Vitamina C">
+            <img class="img_producto" src="<?php echo RUTA_URL;?>/img/categoria/<?php echo $categorias[$i]?>.jpg" alt="Vitamina C">
         
         </article>
            
-    <?php   }//lleve if 
+            <?php } //llave de if
         }//llave for?>
 
     </section>  
-<?php }while($datosTarjeta["seguir"]);//llave whule?>
+<?php }//llave while?>

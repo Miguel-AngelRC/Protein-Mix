@@ -22,15 +22,9 @@ ENGINE = InnoDB;
 -- Table `protein_mix`.`VentaDiaria`	
 -- -----------------------------------------------------	
 CREATE TABLE IF NOT EXISTS `protein_mix`.`VentaDiaria` (	
-<<<<<<< HEAD:esquema DB/esquema DB.sql
   `idVentaDiaria` INT NOT NULL auto_increment,	
-  `totalComprasD` FLOAT NOT NULL,	
   `fecha` DATE NOT NULL,	
-=======
-  `idVentaDiaria` INT NOT NULL,	
   `totalComprasD` FLOAT NULL,	
-  `fecha` DATE NULL,	
->>>>>>> 4eda72a8f2947b376b03d42458437501c31e8606:scripts BD/Esquema DB.sql
   PRIMARY KEY (`idVentaDiaria`))	
 ENGINE = InnoDB;	
 
@@ -63,11 +57,7 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `protein_mix`.`Categoria` (	
   `idCategoria` INT NOT NULL auto_increment,	
   `nombreCategoria` VARCHAR(100) NULL,	
-<<<<<<< HEAD:esquema DB/esquema DB.sql
-  `descripcion` VARCHAR(400) NULL,	
-=======
-  `descripcion` VARCHAR(300) NULL,	
->>>>>>> 4eda72a8f2947b376b03d42458437501c31e8606:scripts BD/Esquema DB.sql
+  `descripcion` VARCHAR(400) NULL,		
   PRIMARY KEY (`idCategoria`))	
 ENGINE = InnoDB;	
 
@@ -75,15 +65,9 @@ ENGINE = InnoDB;
 -- Table `protein_mix`.`Producto`	
 -- -----------------------------------------------------	
 CREATE TABLE IF NOT EXISTS `protein_mix`.`Producto` (	
-<<<<<<< HEAD:esquema DB/esquema DB.sql
   `idProducto` INT NOT NULL auto_increment,	
   `nombreProducto` VARCHAR(100) NOT NULL,	
-  `descripcion` VARCHAR(400) NOT NULL,	
-=======
-  `idProducto` INT NOT NULL,	
-  `nombreProducto` VARCHAR(100) NOT NULL,	
-  `descripcion` VARCHAR(300) NOT NULL,	
->>>>>>> 4eda72a8f2947b376b03d42458437501c31e8606:scripts BD/Esquema DB.sql
+  `descripcion` VARCHAR(400) NOT NULL,
   `precio` FLOAT NOT NULL,	
   `stock` INT NOT NULL,	
   `idCategoria` INT NOT NULL,	

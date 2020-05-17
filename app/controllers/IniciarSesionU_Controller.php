@@ -1,5 +1,7 @@
 <?php
     class IniciarSesionU_Controller extends Controller{
+        
+        //constructor 
         public function  __construct (){
             $this->vista('pages/iniciarSesionU');
         }
@@ -12,14 +14,13 @@
         //Verifica si el  usuario esta registrado
         public function validarRegistro (){
             
-            //se incluye y crea una instancia del modelo RegistrarUsuario
+            //Se instancia del modelo IniciarSesionU_Model
             $iniciarSesion = $this->modelo('IniciarSesionU_Model');
 
             $verificar = $iniciarSesion->validarDatos() ;
 
             if ($verificar[0]) {
                 header('Location: '.RUTA_URL.'/Paginas_Controller');
-                // $this->vista('pages/paginaPrincipal');
             }else{
                 echo "<script>alert('$verificar[1]');</script>";
                         $this->vista('pages/iniciarSesionU');

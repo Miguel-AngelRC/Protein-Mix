@@ -12,5 +12,3 @@
 
 <!--------------------------- Footer ------------------------->
 <?php require_once RUTA_APP.'/views/inc/footer.php';?>
-
-<?php print_r($this->idProductos(1));?>

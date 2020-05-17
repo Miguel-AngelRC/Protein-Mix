@@ -7,40 +7,49 @@
         public function  __construct (){
             //se incluye y crea una instancia del modelo Tarjetas_Model
             $this->modeloTarjeta = $this->modelo('Tarjetas_Model');
-            
         }
 
-        //carga pagina index (registrar usuarios) metodo por default
+        /*<<<<<<METODOS PARA PAGINA PRINCIPAL >>>>>>*/
+
+        //carga la página principal 
         public function index(){ 
             $this->vista('pages/paginaPrincipal');
         }
 
-        
-
-        // pagina compra
-        public function comprar(){
-            $this->vista('pages/comprar');
+        //Obtiene los id de los productos de la categoria
+        public function idCategorias (){
+            $idCategoria = $this->modeloTarjeta->idCategorias();
+            $idArray;
+            //extrae los id del resultado
+            foreach ($idCategoria as $produc) {
+                $idArray [] = $produc->idCategoria;
+            }
+            return $idArray;
         }
 
-        public function construccion(){
-            $this->vista('pages/construccion');
-        }
-        
-        //Coneguir datos de tupla en tupla de categoria
+        //Consigue los datos de una categoría con respecto a su id
         public function tarjetasCategoria($idCategoria){
             return $this->modeloTarjeta->obtenerDatosCategoria($idCategoria,);
         }
 
+        //pagína en construcción
+        public function construccion(){
+            $this->vista('pages/construccion');
+        }
+
+
         /*<<<<<<METODOS PARA PAGINA CATEGORIA>>>>>>*/
 
-        //Carga pagina categoria
+        //Carga pagina categoria y se pasa como parametro el id de la categoria
         public function categoria($categoria){
             $this->vista('pages/categoria',$categoria);
         }
+
         //Obtiene el nombre de la categoria
         public function nombreCategoria($idCategoria){
             return $this->modeloTarjeta->nombreCategoria($idCategoria);
         }
+
         //Obtiene los id de los productos de la categoria
         public function idProductos ($idCategoria){
             $idProductos = $this->modeloTarjeta->idProductos($idCategoria);

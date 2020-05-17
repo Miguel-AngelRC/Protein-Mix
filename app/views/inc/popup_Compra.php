@@ -7,7 +7,7 @@
 		</div>
 		
 		<div id="contenido">
-			<h3 id="producto"><?php echo$datosTarjeta["titulo"]?></h3>
+			<h3 id="producto"></h3>
 			<h4 id="informacion"><?php echo$datosTarjeta["descripcion"]?></h4>
 			<div id="btnAcciones">
 				<a class="opciones " href="<?php echo RUTA_URL;?>/Paginas_Controller/construccion">Agregar</a>
