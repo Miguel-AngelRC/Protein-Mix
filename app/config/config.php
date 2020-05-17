@@ -9,7 +9,7 @@
 
     //Ruta url
     //define('RUTA_URL','http://protein-mix.myvnc.com/Protein-Mix'); //ruta para servidor
-    define('RUTA_URL','http://localhost/Protein-Mix');//ruta cuando se esta desarrollando
+    define('RUTA_URL','http://localhost/protein');//ruta cuando se esta desarrollando
     
     define('NOMBRE_SITIO','PROTEIN-MIX');
 

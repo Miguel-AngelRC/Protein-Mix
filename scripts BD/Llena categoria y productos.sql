@@ -1,9 +1,10 @@
+
 insert into protein_mix.categoria (nombreCategoria,descripcion) values
 ('Suplementacion en gomitas','¡Obtén los nutrientes de una manera fácil y deliciosa! Sólo consume 4 gomitas al día y empieza a cuidar tu salud.'),
 ('Infusiones herbales','Disfruta de una bebida rica y saludable en donde quieras.'),
 ('Antioxidantes e inmunológicos','Evita el daño de los radicales libres en tus células corporales y fortalece tu sistema de defensa.'),
 ('Articulaciones','Protege al cartílago articular del desgaste generado por la edad o ejercicio con la variedad de suplementos que tenemos para su cuidado.'),
-('Cabello, piel, uñas','::¡Porque la belleza viene desde adentro! Consume suplementos para mantener una piel joven e hidratada, un cabello saludable, así como uñas fuertes.'),
+('Cabello, piel, uñas','¡Porque la belleza viene desde adentro! Consume suplementos para mantener una piel joven e hidratada, un cabello saludable, así como uñas fuertes.'),
 ('Cardiovascular','Ayudan a prevenir enfermedades cardiacas y mejorar la salud del sistema cardiovascular en general.'),
 ('Control de peso','Contribuyen a adelgazar en conjunto con una alimentación equilibrada y ejercicio.'),
 ('Digestión','Favorecen el correcto funcionamiento del aparato digestivo para una adecuada absorción de nutrientes.'),
@@ -14,7 +15,7 @@ insert into protein_mix.categoria (nombreCategoria,descripcion) values
 ('Superalimentos','Contienen vitaminas, minerales, fitonutrientes y fitoquímicos, que ayudan a protegernos contra las enfermedades.');
 
 insert into protein_mix.producto (nombreProducto,descripcion,precio,stock,idCategoria) values
-('Multivitamínico infantil','Frasco con 100 gomitas en forma de oso sabor frutos rojos y limón que contienen O mega 3.',260.00,0,1),
+('Multivitamínico infantil','Frasco con 100 gomitas en forma de oso sabor frutos rojos y limón que contienen Omega 3.',260.00,0,1),
 ('Glucosamina','Frasco con 150 gomitas sabor cereza que contienen condroitina, vitamina C y vitamina D3.',350.00,0,1),
 ('Belabear Vitamina E','Frasco con 100 gomitas en forma de oso sabor durazno que contienen colágeno.',260.00,0,1),
 ('Belabear Vitamina B12','Frasco con 100 gomitas en forma de oso sabor naranja que contienen jalea real y guaraná.',260.00,0,1),
@@ -56,13 +57,13 @@ insert into protein_mix.producto (nombreProducto,descripcion,precio,stock,idCate
 ('ACG-30','Frasco con 60 cápsulas de medicamento herbolario que ayudan a controlar el peso.',280.00,0,7),
 ('Jengibre','Caja con 60 cápsulas que contienen jengibre + hinojo.',220.00,0,7),
 ('Aceite de Coco','Matraz con 120 cápsulas que contienen ácido linoleico conjugado y aceite de chía.',250.00,0,7),
-('Aceite de Coco','Matraz con 120 cápsulas que contienen zábila + ciruela y lactobacilos.',215.00,0,8),
+('Aloe Vera','Matraz con 120 cápsulas que contienen zábila + ciruela y lactobacilos.',215.00,0,8),
 ('Jugo Verde Mix','Frasco con 500 g de fibra en polvo contiene perejil, piña, apio, chía, nopal, ciruela y té verde.',220.00,0,8),
 ('Jengibre','Caja con 60 cápsulas que contienen jengibre + hinojo.',220.00,0,8),
 ('Magnesio','Matraz con 100 cápsulas que contienen semilla de Alcaravea.',250.00,0,8),
 ('Sky Fiber','Frasco de suplemento alimenticio a base de fibra soluble sin gluten, sin azúcar añadida, sin saborizantes.',220.00,0,8),
 ('Jugo Verde Mix','Caja con 10 sobres para preparar jugo verde contiene perejil, piña, apio, chía, nopal, ciruela y té verde.',200.00,0,8),
-('Belabear Vitamina B 12','Frasco con 100 gomitas en forma de oso, sabor naranja, que contienen jalea real y guaraná.',260.00,0,9),
+('Belabear Vitamina B12','Frasco con 100 gomitas en forma de oso, sabor naranja, que contienen jalea real y guaraná.',260.00,0,9),
 ('Complejo B','Matraz con 150 cápsulas que contienen complejo B + jalea real.',250.00,0,9),
 ('Jalea Real','Matraz con 180 cápsulas en forma de perla que contienen jalea real + vitaminas A, C, D, E.',250.00,0,9),
 ('JR-CB','Caja con 40 cápsulas que contiene jalea real y complejo B.',180.00,0,9),
