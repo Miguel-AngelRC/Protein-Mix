@@ -66,5 +66,11 @@
             return $this->modeloTarjeta->obtenerDatosProductos($idCategoria);
         }
 
+        public function aux(){
+            $datosProducto = $this->tarjetasProductos($_POST["idProducto"]);
+            $datosProducto = json_encode($datosProducto);
+            echo  $datosProducto;
+        }
+
     }
 ?>

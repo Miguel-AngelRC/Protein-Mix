@@ -37,8 +37,6 @@
                //incluir el controlador
                require_once '../app/controllers/administrador/'.$this->controladorActual.'.php';
                $this->controladorActual = new $this->controladorActual;
-            }else {
-               echo "<p>El controlador <strong> ".$url[0]." </strong> no existe, pero te redirecciono al controlador por default</p>";
             }
 
             
@@ -47,10 +45,7 @@
             if (isset($url[1])) {//verifica si se puso un metodo en la url
                if (method_exists($this->controladorActual,$url[1])) {//verifica si ese metodo existe
                   $this->metodoActual=$url[1];
-                  echo "<p>El método <strong>".$url[1]."</strong> si existe </p>";
                   unset($url[1]);
-               }else{
-                  echo "<p>El método <strong>".$url[1]."</strong> no existe </p>";
                }
             }
 

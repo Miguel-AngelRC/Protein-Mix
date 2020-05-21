@@ -8,7 +8,7 @@
 		
 		<div id="contenido">
 			<h3 id="producto"></h3>
-			<h4 id="informacion"><?php echo$datosTarjeta["descripcion"]?></h4>
+			<h4 id="descripcion"></h4>
 			<div id="btnAcciones">
 				<a class="opciones " href="<?php echo RUTA_URL;?>/Paginas_Controller/construccion">Agregar</a>
             	<a class="opciones" href="<?php echo RUTA_URL;?>/Paginas_Controller/construccion">Quitar</a>
@@ -16,8 +16,8 @@
 			</div>
 	
 			<div id="datos">
-				<p>Stock: 40</p>
-				<p>Precio: 40</p>
+				<p id="stock">Stock: 40</p>
+				<p id="precio">Precio: 40</p>
 			</div>
 		</div>
 	</div>

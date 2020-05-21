@@ -59,10 +59,7 @@
         }
 
         public function obtenerDatosProductos($idProducto){
-            $datosTarjeta = [
-                            "titulo",
-                            "descripcion",
-                            "precio"]; 
+            $datosTarjeta = []; 
                 try {
                     $this->db->query("SELECT nombreProducto FROM ".DB_NAME.".Producto WHERE idProducto = '$idProducto'");
                     $datosTarjeta ["titulo"] = (string) $this->db->Registro()->nombreProducto;
@@ -72,6 +69,10 @@
 
                     $this->db->query("SELECT precio FROM ".DB_NAME.".Producto WHERE idProducto = '$idProducto'");
                     $datosTarjeta ["precio"] = (string)$this->db->Registro()->precio;
+
+                    $this->db->query("SELECT stock FROM ".DB_NAME.".Producto WHERE idProducto = '$idProducto'");
+                    $datosTarjeta ["stock"] = (string)$this->db->Registro()->stock;
+
                     
                     return $datosTarjeta;
                 } 

@@ -17,9 +17,7 @@
         }
 
         public function obtenerDatosCategoria($idCategoria){
-            $datosTarjeta = [
-                            "titulo",
-                            "descripcion"]; 
+            $datosTarjeta = []; 
                 try {   
     
                         $this->db->query("SELECT nombreCategoria FROM ".DB_NAME.".Categoria WHERE idCategoria = '$idCategoria'");

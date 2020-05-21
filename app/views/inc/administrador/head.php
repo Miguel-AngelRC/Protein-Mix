@@ -7,10 +7,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Estilos del banner -->
-    <link rel="stylesheet" href="css/materialize.css">
-    <link rel="stylesheet" href="css/estilosBanner.css">
-    
     <!-- Estilos generales -->
     <link rel="stylesheet" href="<?php echo RUTA_URL;?>/css/estilos_header.css">   
     <link rel="stylesheet" href="<?php echo RUTA_URL;?>/css/contenido.css"> 

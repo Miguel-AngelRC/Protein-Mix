@@ -12,7 +12,7 @@ function abrirPopup (idProducto, ruta){
 	overlay.classList.add('active');
 	popup.classList.add('active');
 
-	// traerDatos(idProducto,ruta);
+	traerDatos(idProducto,ruta);
 };
 
 btnCerrarPopup.addEventListener('click', function(e){
@@ -23,20 +23,23 @@ btnCerrarPopup.addEventListener('click', function(e){
 
 
 
-// function traerDatos (idProducto,ruta){
+function traerDatos (idProducto,ruta){
+	ruta += "/Paginas_Controller/aux/" 
 
-// 	idProd = idProducto;
-// 	ruta += "/app/controllers/aux.php" 
-
-// 	console.log(ruta);
-// 	$.ajax({
-//         url: ruta,
-//         data: {idProd},
-//         type: 'POST',
-//         success: function (response) {
-//           if(!response.error) {
-// 			console.log(response);
-//           }
-//         } 
-//       })
-// }
+	$.ajax({
+ 		url: ruta,
+		data: {idProducto},
+		type: 'POST',
+		success: function (response) {
+			if(!response.error) {
+				var datosTarjeta = JSON.parse(response);//convetir el Json 
+				$('#contenido #producto').text(datosTarjeta["titulo"]);
+				$('#contenido #descripcion').text(datosTarjeta["descripcion"]);
+				$('#contenido #precio').text(datosTarjeta["precio"]);
+				$('#contenido #stock').text(datosTarjeta["stock"]);
+				console.log(datosTarjeta["titulo"]);
+				
+			}
+        } 
+       })
+ }
