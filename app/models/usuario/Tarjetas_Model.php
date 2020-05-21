@@ -22,10 +22,10 @@
                             "descripcion"]; 
                 try {   
     
-                        $this->db->query("SELECT nombreCategoria FROM protein_mix.categoria WHERE idCategoria = '$idCategoria'");
+                        $this->db->query("SELECT nombreCategoria FROM ".DB_NAME.".Categoria WHERE idCategoria = '$idCategoria'");
                         $datosTarjeta ["titulo"] = (string)$this->db->Registro()->nombreCategoria;
                     
-                        $this->db->query("SELECT descripcion FROM protein_mix.categoria WHERE idCategoria = '$idCategoria'");
+                        $this->db->query("SELECT descripcion FROM ".DB_NAME.".Categoria WHERE idCategoria = '$idCategoria'");
                         $datosTarjeta ["descripcion"] = (string)$this->db->Registro()->descripcion;
                           
                         return $datosTarjeta;
@@ -48,13 +48,13 @@
         /*************************************/
         //Obtiene el nombre de una categoria en especifico
         public function nombreCategoria ($idCategoria){
-            $this->db->query("SELECT nombreCategoria FROM protein_mix.categoria WHERE idCategoria = '$idCategoria'");
+            $this->db->query("SELECT nombreCategoria FROM ".DB_NAME.".Categoria WHERE idCategoria = '$idCategoria'");
             return(string)$this->db->Registro()->nombreCategoria; 
         }
 
         //Devuelve aquellos idproductos que pertenecen a la categoria
         public function idProductos ($idCategoria){
-            $this->db->query("SELECT idProducto FROM protein_mix.producto WHERE idCategoria = '$idCategoria'");
+            $this->db->query("SELECT idProducto FROM ".DB_NAME.".Producto WHERE idCategoria = '$idCategoria'");
             return $this->db->Registros(); 
         }
 
@@ -64,13 +64,13 @@
                             "descripcion",
                             "precio"]; 
                 try {
-                    $this->db->query("SELECT nombreProducto FROM protein_mix.producto WHERE idProducto = '$idProducto'");
+                    $this->db->query("SELECT nombreProducto FROM ".DB_NAME.".Producto WHERE idProducto = '$idProducto'");
                     $datosTarjeta ["titulo"] = (string) $this->db->Registro()->nombreProducto;
                 
-                    $this->db->query("SELECT descripcion FROM protein_mix.producto WHERE idProducto = '$idProducto'");
+                    $this->db->query("SELECT descripcion FROM ".DB_NAME.".Producto WHERE idProducto = '$idProducto'");
                     $datosTarjeta ["descripcion"] = (string)$this->db->Registro()->descripcion;
 
-                    $this->db->query("SELECT precio FROM protein_mix.producto WHERE idProducto = '$idProducto'");
+                    $this->db->query("SELECT precio FROM ".DB_NAME.".Producto WHERE idProducto = '$idProducto'");
                     $datosTarjeta ["precio"] = (string)$this->db->Registro()->precio;
                     
                     return $datosTarjeta;

@@ -1,8 +1,8 @@
 <?php
-    class RegistrarAd_Controller extends Controller{
+    class RegistrarAd_Controller extends Controller_Ad{
         
         public function  __construct (){
-            $this->vista('pages/indexAd');
+            $this->vista('index');
         }
 
         //carga pagina index metodo por default
@@ -17,16 +17,17 @@
 
             if ($registrar->verificarAdministrador()) {
                 echo "<script>alert('El administrador ya existe.');</script>";//ventana emergente
-                $this->vista('pages/index');
+                $this->vista('index');
             }
             else{
                 if ($registrar->insertarAdministrador()) {
                     echo "<script>alert('¡Se ha registrado exitosamente!.');</script>";//ventana emergente
-                    header('Location: '.RUTA_URL.'/IniciarSesionAd_Controller');//Redirecciona a la pag de iniciar sesión
+                    //header('Location: '.RUTA_URL.'/IniciarSesionAd_Controller');//Redirecciona a la pag de iniciar sesión
+                    echo "<script>window.location.href='".RUTA_URL."/IniciarSesionAd_Controller'</script>";
                 }
                 else{
                     echo "<script>alert('No se realizó correctamente su registro. Por favor intente de nuevo.');</script>";
-                    $this->vista('pages/index');
+                    $this->vista('index');
                 }
             }
         }

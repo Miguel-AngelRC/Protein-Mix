@@ -15,7 +15,7 @@
         //Verifica si ya existe el Administrador a registrar
         public function verificarAdministrador(){
             try {
-                $this->db->query("SELECT * FROM ".DB_NAME.".ADMINISTRADOR  WHERE nombre = '".$this->nombre."'");
+                $this->db->query("SELECT * FROM ".DB_NAME.".Administrador  WHERE nombre = '".$this->nombre."'");
                 return $this->db->rowCount()==1; //retorna true o false
             } catch (PDOException $e) {
                 $this->error = $e->getMessage();
@@ -27,7 +27,7 @@
         //Insertar Administrador
         public function insertarAdministrador(){
             try {   
-                $this->db->query("INSERT INTO protein_mix.administrador (nombre,contrasena) VALUES('".$this->nombre."','".$this->contrasena."');");
+                $this->db->query("INSERT INTO ".DB_NAME.".Administrador (nombre,contrasena) VALUES('".$this->nombre."','".$this->contrasena."');");
                 $this->db->execute();
                 return true;
             } catch (PDOException $e) {
@@ -36,6 +36,5 @@
                 return false;
             }
         }
-        //limpiarVariables
     }
 ?>

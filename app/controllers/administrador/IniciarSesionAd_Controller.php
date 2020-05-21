@@ -1,7 +1,7 @@
 <?php
-    class IniciarSesionAd_Controller extends Controller{
+    class IniciarSesionAd_Controller extends Controller_Ad{
         public function  __construct (){
-            $this->vista('pages/iniciarSesionAd');
+            $this->vista('iniciarSesionAd');
         }
 
         //carga pagina index metodo por default
@@ -17,12 +17,12 @@
             $verificar = $iniciarSesion->validarDatos() ;
 
             if ($verificar[0]) {
-                header('Location: '.RUTA_URL.'/Paginas_Controller');
-                // $this->vista('pages/paginaPrincipal');
+                //header('Location: '.RUTA_URL.'/Paginas_Controller/indexAd');
+                echo "<script>window.location.href='".RUTA_URL."/Paginas_Controller_Ad'</script>";
             }
             else{
                 echo "<script>alert('$verificar[1]');</script>";
-                $this->vista('pages/iniciarSesionAd');
+                $this->vista('iniciarSesionAd');
             }
         }
     }

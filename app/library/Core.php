@@ -18,18 +18,30 @@
             $url = $this->getUrl();
 
             //buscar en carpeta controllers si el controlador existe
-            if(file_exists('../app/controllers/'.ucwords($url[0]).'.php')){//ucwords convierte la primera letra en mayuscula
+            if(file_exists('../app/controllers/usuario/'.ucwords($url[0]).'.php')){//ucwords convierte la primera letra en mayuscula
                //si existe se cambia el controlador por defecto
                $this->controladorActual = ucwords($url[0]);
                //destruir controlador
                unset($url[0]);
-            }else{
+
+               //incluir el controlador
+               require_once '../app/controllers/usuario/'.$this->controladorActual.'.php';
+               $this->controladorActual = new $this->controladorActual;
+
+            }else if(file_exists('../app/controllers/administrador/'.ucwords($url[0]).'.php')){//ucwords convierte la primera letra en mayuscula
+               //si existe se cambia el controlador por defecto
+               $this->controladorActual = ucwords($url[0]);
+               //destruir controlador
+               unset($url[0]);
+
+               //incluir el controlador
+               require_once '../app/controllers/administrador/'.$this->controladorActual.'.php';
+               $this->controladorActual = new $this->controladorActual;
+            }else {
                echo "<p>El controlador <strong> ".$url[0]." </strong> no existe, pero te redirecciono al controlador por default</p>";
             }
 
-            //incluir el controlador
-            require_once '../app/controllers/'.$this->controladorActual.'.php';
-            $this->controladorActual = new $this->controladorActual;
+            
             
             //Buscar si existe el metodo
             if (isset($url[1])) {//verifica si se puso un metodo en la url

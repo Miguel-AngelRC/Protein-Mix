@@ -1,16 +1,14 @@
 <!--------------------------- Head ------------------------->
-<?php require_once RUTA_APP.'/views/inc/head.php';?>
+<?php require_once RUTA_APP.'/views/inc/usuario/head.php';?>
 
 <!--------------------------- Header ------------------------->
-<?php require_once RUTA_APP.'/views/inc/headerAd.php';?>
+<?php require_once RUTA_APP.'/views/inc/usuario/header.php';?>
 
 <!--------------------------- Banner ------------------------->
-<?php require_once RUTA_APP.'/views/inc/banner.php';?>
+<?php require_once RUTA_APP.'/views/inc/usuario/banner.php';?>
 
 <!--------------------------- Tarjetas ------------------------->
-<?php require_once RUTA_APP.'/views/inc/tarjetas_Categoria.php'; ?>
+<?php require_once RUTA_APP.'/views/inc/usuario/tarjetas_Categoria.php'; ?>
 
 <!--------------------------- Footer ------------------------->
 <?php require_once RUTA_APP.'/views/inc/footer.php';?>
-
-<?php print_r($this->idProductos(1));?>

@@ -9,7 +9,6 @@
     <!-- Estilos -->
     <link rel="stylesheet" type="text/css" href="<?php echo RUTA_URL;?>/css/estilo_RegistrarLogin.css?v=<?php echo(rand()); ?>">
     
-    <link rel="shortcut icon" href="<?php echo RUTA_URL;?>/img/proteinmix.ico" type="image/x-icon">
     <title>Iniciar sesión Protein-Mix</title>
 </head>
 <body>

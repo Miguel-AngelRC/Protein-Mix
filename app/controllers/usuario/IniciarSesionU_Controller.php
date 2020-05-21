@@ -1,9 +1,9 @@
 <?php
-    class IniciarSesionU_Controller extends Controller{
+    class IniciarSesionU_Controller extends Controller_Us{
         
         //constructor 
         public function  __construct (){
-            $this->vista('pages/iniciarSesionU');
+            $this->vista('iniciarSesionU');
         }
 
         //carga pagina index (registrar usuarios) metodo por default
@@ -20,10 +20,11 @@
             $verificar = $iniciarSesion->validarDatos() ;
 
             if ($verificar[0]) {
-                header('Location: '.RUTA_URL.'/Paginas_Controller');
+                //header('Location: '.RUTA_URL.'/Paginas_Controller');
+                echo "<script>window.location.href='".RUTA_URL."/Paginas_Controller'</script>";
             }else{
                 echo "<script>alert('$verificar[1]');</script>";
-                        $this->vista('pages/iniciarSesionU');
+                        $this->vista('iniciarSesionU');
             }
         }
     }

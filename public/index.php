@@ -8,5 +8,4 @@
     //Inicializa la clase Core (instancia)
     $iniciar = new Core;
 
-
 ?>

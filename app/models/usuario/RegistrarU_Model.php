@@ -38,7 +38,7 @@
         //insertar usuario
         public function insertarUsuario(){
             try {   
-                $this->db->query("INSERT INTO protein_mix.usuario (nombre,apellidos,ciudad,calle,numero,correo,contrasena) VALUES('".$this->nombre."','".$this->apellidos."','".$this->ciudad."','".$this->calle."','".$this->numero."','".$this->correo."','".$this->contrasena."');");
+                $this->db->query("INSERT INTO ".DB_NAME.".Usuario (nombre,apellidos,ciudad,calle,numero,correo,contrasena) VALUES('".$this->nombre."','".$this->apellidos."','".$this->ciudad."','".$this->calle."','".$this->numero."','".$this->correo."','".$this->contrasena."');");
                 $this->db->execute();
                 return true;
             } catch (PDOException $e) {

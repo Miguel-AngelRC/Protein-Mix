@@ -7,12 +7,12 @@
 <nav id="menu">
     <ul>
         <li id="inicio">
-          <a href="<?php echo RUTA_URL;?>/Paginas_Controller/index">Inicio</a>
+          <a href="<?php echo RUTA_URL;?>/Paginas_Controller_Ad">Inicio</a>
         </li>
         <li id="perfil">
             <a href=""> Perfil</a>
             <ul id="sub_menu">
-                <li class="item"><a href="<?php echo RUTA_URL;?>/">Registrarse</a></li>
+                <li class="item"><a href="<?php echo RUTA_URL;?>/RegistrarAd_Controller">Registrarse</a></li>
                 <li class="item"><a href="<?php echo RUTA_URL;?>/IniciarSesionAd_Controller">Iniciar Sesión</a></li>
                 <li class="item"><a href="<?php echo RUTA_URL;?>/IniciarSesionAd_Controller">Cerrar sesión</a></li>
             </ul>  

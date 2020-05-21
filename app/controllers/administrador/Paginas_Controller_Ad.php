@@ -1,6 +1,6 @@
 <?php
 
-    class Paginas_Controller extends Controller{
+    class Paginas_Controller_Ad extends Controller_Ad{
         
         private $modeloTarjeta;
 
@@ -11,10 +11,11 @@
 
         /*<<<<<<METODOS PARA PAGINA PRINCIPAL >>>>>>*/
 
-        //carga la página principal 
-        public function index(){ 
-            $this->vista('pages/paginaPrincipal');
+        //página principal para administrador
+        public function index(){
+                $this->vista('paginaPrincipalAd');
         }
+        
 
         //Obtiene los id de los productos de la categoria
         public function idCategorias (){
@@ -29,12 +30,12 @@
 
         //Consigue los datos de una categoría con respecto a su id
         public function tarjetasCategoria($idCategoria){
-            return $this->modeloTarjeta->obtenerDatosCategoria($idCategoria,);
+            return $this->modeloTarjeta->obtenerDatosCategoria($idCategoria);
         }
 
         //pagína en construcción
         public function construccion(){
-            $this->vista('pages/construccion');
+            $this->vista('../construccion');
         }
 
 
@@ -42,7 +43,7 @@
 
         //Carga pagina categoria y se pasa como parametro el id de la categoria
         public function categoria($categoria){
-            $this->vista('pages/categoria',$categoria);
+            $this->vista('categoria',$categoria);
         }
 
         //Obtiene el nombre de la categoria

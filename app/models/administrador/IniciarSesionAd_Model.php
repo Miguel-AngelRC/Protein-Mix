@@ -1,6 +1,5 @@
-
 <?php
-    Class IniciarSesionU_Model{
+    Class IniciarSesionAd_Model{
 
         private $db;
         private $nombre;
@@ -12,7 +11,7 @@
 
         public function buscarUsuario(){
             try {
-                $this->db->query("SELECT contrasena FROM protein_mix.usuario WHERE nombre = '$this->nombre'");
+                $this->db->query("SELECT contrasena FROM ".DB_NAME.".Administrador WHERE nombre = '$this->nombre'");
                 $contrasenHash = $this->db->Registro();
                 return $contrasenHash;
             } catch (PDOException $e) {
@@ -29,19 +28,17 @@
             $arrayContrasena = $this->buscarUsuario();//Obtiene contraseña
             
             if (empty($arrayContrasena)) {
-                return [false,"No estás registrado"];
+                return [false,"No está registrado"];
              }else{
                 $contrasenHash = (string)$arrayContrasena->contrasena;
 
                 if (password_verify($this->contrasena,$contrasenHash)) {
                     return [true];                
                 }else{
-                    return [false,"Contraseña invalida, por favor intente de nuevo"];
+                    return [false,"Contraseña inválida. Intenta de nuevo."];
                 }
             }
         }
-
-
     }
 ?>
     

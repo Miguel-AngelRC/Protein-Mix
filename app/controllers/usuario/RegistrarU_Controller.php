@@ -1,9 +1,9 @@
 <?php
 
-    class RegistrarU_Controller extends Controller{
+    class RegistrarU_Controller extends Controller_Us{
         
         public function  __construct (){
-            $this->vista('pages/index');
+            $this->vista('index');
         }
 
         //carga pagina index (registrar usuarios) metodo por default
@@ -18,14 +18,15 @@
 
             if ($registrar->verificarExistencia()) {
                 echo "<script>alert('El usuario ya existe.');</script>";//ventana emergente
-                $this->vista('pages/index');
+                $this->vista('index');
             }else{
                     if ($registrar->insertarUsuario()) {
                         echo "<script>alert('Felicidades te has registrado.');</script>";//ventana emergente
-                        header('Location: '.RUTA_URL.'/IniciarSesionU_Controller');
+                        //header('Location: '.RUTA_URL.'/IniciarSesionU_Controller');
+                        echo "<script>window.location.href='".RUTA_URL."/IniciarSesionU_Controller'</script>";
                     }else{
                         echo "<script>alert('No se realizó correctamente su registro. Por favor intente de nuevo.');</script>";
-                        $this->vista('pages/index');
+                        $this->vista('index');
                     }
             }
         }
