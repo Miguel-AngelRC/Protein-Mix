@@ -10,7 +10,6 @@
         <!--IdProducto del producto a editar-->
         <label for="idProducto">Clave del producto</label>
             <input id="idProducto" type="text" name="idProducto" maxlength="50" required>
-            <a href=""></a>
         <input href= type="submit" value="Editar producto">
     </form>
 </body>
