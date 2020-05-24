@@ -6,11 +6,11 @@
     <title>Document</title>
 </head>
 <body>
-    <form id="formRegistrar" method="post" action="<?php echo RUTA_URL;?>/"><!--FALLA DESPUÉS DE ENVIAR-->
+    <form id="formRegistrar" method="post" action="<?php echo RUTA_URL;?>/EditarProductoAd2_Controller"><!--FALLA DESPUÉS DE ENVIAR-->
         <!--IdProducto del producto a editar-->
-        <label for="idProducto">Clave del producto</label>
+        <label for="idProducto">Clave del producto a editar</label>
             <input id="idProducto" type="text" name="idProducto" maxlength="50" required>
-        <input href= type="submit" value="Editar producto">
+        <button type="submit">Editar producto</button>
     </form>
 </body>
 </html>

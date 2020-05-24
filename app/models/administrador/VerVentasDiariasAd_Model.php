@@ -7,7 +7,7 @@
             $this->db = new Base;//Hacer conexion con el constructor de Base
         }
 
-        public function verVentasDiarias(){//buscarUsuario
+        public function verVentasDiarias(){
             try {
                 $consulta=$this->db->query("SELECT * FROM ".DB_NAME.".ventadiaria");//selecciona todos los datos de la tabla ventadiaria
                 return $this->db->Registros();
