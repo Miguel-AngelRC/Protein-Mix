@@ -9,7 +9,7 @@
 
     //Ruta url
     //define('RUTA_URL','https://protein-mix.000webhostapp.com/Protein-Mix'); //ruta para servidor
-    define('RUTA_URL','http://localhost/Protein-Mix');//ruta cuando se esta desarrollando
+    define('RUTA_URL','http://localhost/proteinmix');//ruta cuando se esta desarrollando
     
     define('NOMBRE_SITIO','PROTEIN-MIX');
 

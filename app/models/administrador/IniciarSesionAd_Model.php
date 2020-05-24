@@ -6,12 +6,12 @@
         private $contrasena;
 
         public function __construct () {
-            $this->db= new Base;//Hacer conexion con el constructor de Base
+            $this->db = new Base;//Hacer conexion con el constructor de Base
         }
 
         public function buscarUsuario(){
             try {
-                $this->db->query("SELECT contrasena FROM ".DB_NAME.".Administrador WHERE nombre = '$this->nombre'");
+                $this->db->query("SELECT contrasena FROM ".DB_NAME.".administrador WHERE nombre = '$this->nombre'");
                 $contrasenHash = $this->db->Registro();
                 return $contrasenHash;
             } catch (PDOException $e) {
@@ -41,4 +41,3 @@
         }
     }
 ?>
-    

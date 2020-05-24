@@ -19,7 +19,7 @@
         $datosTarjeta = $this->tarjetasCategoria($categorias[$i]);   
     ?>
 
-    <!-- Escribe tarejeta -->
+    <!-- Escribe tarjeta -->
         <article class="tarjeta">
             <div class="descripcion">
                 <h2><?php echo$datosTarjeta["titulo"]?></h2>
@@ -27,11 +27,8 @@
                 <a class="verMas" href="<?php echo RUTA_URL;?>/Paginas_Controller_Ad/categoria/<?php echo $categorias[$i];?>"><div>Ver más</div></a>
             </div>
             <img class="img_producto" src="<?php echo RUTA_URL;?>/img/categoria/<?php echo $categorias[$i]?>.jpg" alt="Vitamina C">
-        
-        </article>
-           
-            <?php } //llave de if
+        </article>  
+            <?php }//llave de if
         }//llave for?>
-
     </section>  
 <?php }//llave while?>

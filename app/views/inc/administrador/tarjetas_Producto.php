@@ -34,4 +34,9 @@
         }//llave segundo for?>
 
     </section>  
-<?php }//lave primer for?>
+<?php }//lave  while?>
+
+<div id="contenedorAgregar"> 
+    <a  id ="btnAgregar" href="<?php echo RUTA_URL;?>/AgregarProductoAd_Controller">Agregar</a>
+    <a  id ="btnAgregar" href="<?php echo RUTA_URL;?>/EliminarProductoAd_Controller">Eliminar</a><!--boton prueba-->
+</div>

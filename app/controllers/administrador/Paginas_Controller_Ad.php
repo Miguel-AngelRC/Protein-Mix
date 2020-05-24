@@ -16,7 +16,6 @@
                 $this->vista('paginaPrincipalAd');
         }
         
-
         //Obtiene los id de los productos de la categoria
         public function idCategorias (){
             $idCategoria = $this->modeloTarjeta->idCategorias();
@@ -37,7 +36,6 @@
         public function construccion(){
             $this->vista('../construccion');
         }
-
 
         /*<<<<<<METODOS PARA PAGINA CATEGORIA>>>>>>*/
 
@@ -65,7 +63,6 @@
         //Coneguir datos de tupla en tupla de producto pero de una categoria especifica
         public function tarjetasProductos($idCategoria){
             return $this->modeloTarjeta->obtenerDatosProductos($idCategoria);
-        }
-
+        }   
     }
 ?>

@@ -11,7 +11,7 @@
 
         //Verifica si el  Administrador ya está registrado
         public function validarRegistro (){  
-            //se incluye y crea una instancia del modelo RegistrarAdministrador
+            //se incluye y crea una instancia del modelo IniciarSesionAd_Model
             $iniciarSesion = $this->modelo('IniciarSesionAd_Model');
 
             $verificar = $iniciarSesion->validarDatos() ;

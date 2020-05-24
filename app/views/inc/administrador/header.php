@@ -10,11 +10,12 @@
           <a href="<?php echo RUTA_URL;?>/Paginas_Controller_Ad">Inicio</a>
         </li>
         <li id="perfil">
-            <a href=""> Perfil</a>
+            <a href="">Perfil</a>
             <ul id="sub_menu">
                 <li class="item"><a href="<?php echo RUTA_URL;?>/RegistrarAd_Controller">Registrarse</a></li>
                 <li class="item"><a href="<?php echo RUTA_URL;?>/IniciarSesionAd_Controller">Iniciar Sesión</a></li>
                 <li class="item"><a href="<?php echo RUTA_URL;?>/IniciarSesionAd_Controller">Cerrar sesión</a></li>
+                <li class="item"><a href="<?php echo RUTA_URL;?>/VerVentasDiariasAd_Controller">Ver ventas</a></li><!--PRUEBA: agregado link para ver ventas-->
             </ul>  
          </li>
     </ul>
