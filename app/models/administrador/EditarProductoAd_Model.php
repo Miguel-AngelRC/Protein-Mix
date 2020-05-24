@@ -9,6 +9,8 @@
         private $precio;
         private $stock;
 
+        public $fila;
+        
         public function __construct () {
             $this->db = new Base;//Hacer conexion con el constructor de Base
             $this->idProducto = $_POST['idProducto'];
@@ -22,7 +24,9 @@
         public function consultaProducto(){
             try {
                 $consulta=$this->db->query("SELECT * FROM ".DB_NAME.".Producto  WHERE idProducto = '".$this->idProducto."'");
-                return $this->db->registro();
+                $fila=mysql_fetch_array($consulta);
+                return $fila;
+                //return $this->db->registro();
             } catch (PDOException $e) {
                 $this->error = $e->getMessage();
                 echo $this->error;
