@@ -18,16 +18,8 @@
             if ($registrar->consultaProducto()) {
         
                 $filaRegistro = $registrar->consultaProducto();
-                
-                foreach ($filaRegistro as $registroProducto) {
-                    $fila;
-                    $fila["nombreProducto"] = (string) $registroProducto->nombreProducto;
-                    $fila["descripcion"] = (string) $registroProducto->descripcion;
-                    $fila["precio"] = (int) $registroProducto->precio;
-                    $fila["stock"] = (int) $registroProducto->stock;
-                    $fila["idCategoria"] = (int) $registroProducto->idCategoria;
-                }
-                return $registroProducto;
+
+                return $filaRegistro;
             }
         }
     }
