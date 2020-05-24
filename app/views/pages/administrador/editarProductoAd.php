@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form id="formRegistrar" method="post" action="<?php echo RUTA_URL;?>/AgregarProductoAd_Controller/registrarProducto"><!--FALLA DESPUÉS DE ENVIAR-->
+    <form id="formRegistrar" method="post" action="<?php echo RUTA_URL;?>/"><!--FALLA DESPUÉS DE ENVIAR-->
         <!--IdProducto del producto a editar-->
         <label for="idProducto">Clave del producto</label>
             <input id="idProducto" type="text" name="idProducto" maxlength="50" required>
