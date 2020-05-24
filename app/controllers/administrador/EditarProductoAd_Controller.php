@@ -9,34 +9,26 @@
         public function index(){
 
         }
-
+        
         //Función verIdProducto que llama a consultaProducto
-        public function verIdProducto(){
+        public function verProducto(){
             //se incluye y crea una instancia del modelo EditarProductoAd_Model
             $registrar = $this->modelo('EditarProductoAd_Model');
 
             if ($registrar->consultaProducto()) {
-                echo "<script>alert('Este producto sí existe.');</script>";//ventana emergente
-            }
-        }
-
-        function verRegistro(){
-            //se incluye y crea una instancia del modelo VerVentasDiariasAd_Model
-            $consulta = $this->modelo('EditarProductoAd_Model');
-
-            $filaRegistro = $consulta->consultaProducto();
-
-            $registro;
         
-            foreach ($filaRegistro as $registroProducto) {
-                $fila;
-                $fila["nombreProducto"] = $registroProducto->nombreProducto;
-                $fila["descripcion"] = $registroProducto->descripcion;
-                $fila["precio"] = $registroProducto->precio;
-                $fila["stock"] = $registroProducto->stock;
-                $fila["idCategoria"] = $registroProducto->idCategoria;
+                $filaRegistro = $registrar->consultaProducto();
+                
+                foreach ($filaRegistro as $registroProducto) {
+                    $fila;
+                    $fila["nombreProducto"] = (string) $registroProducto->nombreProducto;
+                    $fila["descripcion"] = (string) $registroProducto->descripcion;
+                    $fila["precio"] = (int) $registroProducto->precio;
+                    $fila["stock"] = (int) $registroProducto->stock;
+                    $fila["idCategoria"] = (int) $registroProducto->idCategoria;
+                }
+                return $registroProducto;
             }
-            return $registro;
         }
     }
 ?>
