@@ -21,8 +21,6 @@ btnCerrarPopup.addEventListener('click', function(e){
 	popup.classList.remove('active');
 });
 
-
-
 function traerDatos (idProducto,ruta){
 	ruta += "/Paginas_Controller/aux/" 
 
@@ -35,11 +33,10 @@ function traerDatos (idProducto,ruta){
 				var datosTarjeta = JSON.parse(response);//convetir el Json 
 				$('#contenido #producto').text(datosTarjeta["titulo"]);
 				$('#contenido #descripcion').text(datosTarjeta["descripcion"]);
-				$('#contenido #precio').text(datosTarjeta["precio"]);
-				$('#contenido #stock').text(datosTarjeta["stock"]);
+				$('#contenido #precio').text("Precio: "+datosTarjeta["precio"]);
+				$('#contenido #stock').text("Stock: "+datosTarjeta["stock"]);
 				console.log(datosTarjeta["titulo"]);
-				
 			}
         } 
-       })
- }
+    })
+}

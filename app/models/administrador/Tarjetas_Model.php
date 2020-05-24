@@ -18,30 +18,28 @@
 
         public function obtenerDatosCategoria($idCategoria){
             $datosTarjeta = []; 
-                try {   
+            try {   
     
-                        $this->db->query("SELECT nombreCategoria FROM ".DB_NAME.".Categoria WHERE idCategoria = '$idCategoria'");
-                        $datosTarjeta ["titulo"] = (string)$this->db->Registro()->nombreCategoria;
+                $this->db->query("SELECT nombreCategoria FROM ".DB_NAME.".Categoria WHERE idCategoria = '$idCategoria'");
+                $datosTarjeta ["titulo"] = (string)$this->db->Registro()->nombreCategoria;
                     
-                        $this->db->query("SELECT descripcion FROM ".DB_NAME.".Categoria WHERE idCategoria = '$idCategoria'");
-                        $datosTarjeta ["descripcion"] = (string)$this->db->Registro()->descripcion;
+                $this->db->query("SELECT descripcion FROM ".DB_NAME.".Categoria WHERE idCategoria = '$idCategoria'");
+                $datosTarjeta ["descripcion"] = (string)$this->db->Registro()->descripcion;
                           
-                        return $datosTarjeta;
-                } 
-                catch (Exception $e) {
-                    $this->error = $e->getMessage();
-                    echo $this->error;
-                    return $datosTarjeta;
-                }catch (PDOException $e) {
-                    $this->error = $e->getMessage();
-                    echo $this->error;
-                    return $datosTarjeta;
-                }
+                return $datosTarjeta;
+            } 
+            catch (Exception $e) {
+                $this->error = $e->getMessage();
+                echo $this->error;
+                return $datosTarjeta;
+            }catch (PDOException $e) {
+                $this->error = $e->getMessage();
+                echo $this->error;
+                return $datosTarjeta;
+            }
         }
 
-
-
-         /***************************************/
+        /***************************************/
         /*** Funciones para tabla Productos ***/
         /*************************************/
         //Obtiene el nombre de una categoria en especifico
@@ -61,29 +59,27 @@
                             "titulo",
                             "descripcion",
                             "precio"]; 
-                try {
-                    $this->db->query("SELECT nombreProducto FROM ".DB_NAME.".Producto WHERE idProducto = '$idProducto'");
-                    $datosTarjeta ["titulo"] = (string) $this->db->Registro()->nombreProducto;
+            try {
+                $this->db->query("SELECT nombreProducto FROM ".DB_NAME.".Producto WHERE idProducto = '$idProducto'");
+                $datosTarjeta ["titulo"] = (string) $this->db->Registro()->nombreProducto;
                 
-                    $this->db->query("SELECT descripcion FROM ".DB_NAME.".Producto WHERE idProducto = '$idProducto'");
-                    $datosTarjeta ["descripcion"] = (string)$this->db->Registro()->descripcion;
+                $this->db->query("SELECT descripcion FROM ".DB_NAME.".Producto WHERE idProducto = '$idProducto'");
+                $datosTarjeta ["descripcion"] = (string)$this->db->Registro()->descripcion;
 
-                    $this->db->query("SELECT precio FROM ".DB_NAME.".Producto WHERE idProducto = '$idProducto'");
-                    $datosTarjeta ["precio"] = (string)$this->db->Registro()->precio;
+                $this->db->query("SELECT precio FROM ".DB_NAME.".Producto WHERE idProducto = '$idProducto'");
+                $datosTarjeta ["precio"] = (string)$this->db->Registro()->precio;
                     
-                    return $datosTarjeta;
-                } 
-                catch (Exception $e) {
-                    $this->error = $e->getMessage();
-                    echo $this->error;
-                    return $datosTarjeta;
-                }catch (PDOException $e) {
-                    $this->error = $e->getMessage();
-                    echo $this->error;
-                    return $datosTarjeta;
-                }
+                return $datosTarjeta;
+            } 
+            catch (Exception $e) {
+                $this->error = $e->getMessage();
+                echo $this->error;
+                return $datosTarjeta;
+            }catch (PDOException $e) {
+                $this->error = $e->getMessage();
+                echo $this->error;
+                return $datosTarjeta;
+            }
         }
-
-        
     }
 ?>

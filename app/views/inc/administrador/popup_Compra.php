@@ -8,17 +8,10 @@
 		
 		<div id="contenido">
 			<h3 id="producto"></h3>
-			<h4 id="informacion"><?php echo$datosTarjeta["descripcion"]?></h4>
-			<div id="btnAcciones">
-				<a class="opciones " href="<?php echo RUTA_URL;?>/Paginas_Controller_Ad/construccion">Agregar</a>
-            	<a class="opciones" href="<?php echo RUTA_URL;?>/Paginas_Controller_Ad/construccion">Quitar</a>
-	           	<a class="opciones" href="<?php echo RUTA_URL;?>/Paginas_Controller_Ad/construccion">Comprar</a>
-			</div>
-	
-			<div id="datos">
-				<p>Stock: 40</p>
-				<p>Precio: 40</p>
-			</div>
+			<h4 id="descripcion"></h4>
+			<h5 id="precio"></h5>
+			<h5 id="stock"></h5>
 		</div>
+
 	</div>
 </div>

@@ -23,7 +23,7 @@
                 <h2><?php echo $datosTarjeta["titulo"]?></h2>
                 <p> <?php echo $datosTarjeta["descripcion"]?></p>
                 <p class="precio">Precio $<?php echo$datosTarjeta["precio"]?></p>
-                <buttom  class="btn-abrir-popup" onclick="abrirPopup(<?php echo $productos[$i]?>,'<?php echo RUTA_URL ?>')">Comprar</buttom>
+                <buttom  class="btn-abrir-popup" onclick="abrirPopup(<?php echo $productos[$i]?>,'<?php echo RUTA_URL ?>')">Modificar</buttom>
             </div>
             <img class="img_producto" src="<?php echo RUTA_URL;?>/img/<?php echo $datos[0]."/".$productos[$i]?>.jpg" alt="Vitamina C">
         
