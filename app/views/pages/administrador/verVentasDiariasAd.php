@@ -1,5 +1,5 @@
 
-<table border="solid" cellspacing=1 cellpadding=2 style="font-size: 8pt">
+<table border=solid>
 
 <tr>
     <td>Id Venta Diaria</td>
