@@ -2,18 +2,18 @@
 <table border="1" cellspacing=1 cellpadding=2 style="font-size: 8pt">
 
 <tr>
-    <td><font face="verdana"><b>Id Venta Diaria</b></font></td>
-    <td><font face="verdana"><b>Total de Compras por Día</b></font></td>
-    <td><font face="verdana"><b>Fecha</b></font></td>
+    <td>Id Venta Diaria</td>
+    <td>Total de Compras por Día</td>
+    <td>Fecha</td>
 </tr>
 
 <?php
     foreach ($datos as $registro) {  
 ?>
     <tr>
-        <td><font face="verdana"><?php echo $registro["idVentaDiaria"]?></font></td>
-        <td><font face="verdana"><?php echo $registro["totalComprasD"]?></font></td>
-        <td><font face="verdana"><?php echo $registro["fecha"]?></font></td>
+        <td><?php echo $registro["idVentaDiaria"]?></td>
+        <td><?php echo $registro["totalComprasD"]?></td>
+        <td><?php echo $registro["fecha"]?></td>
     </tr>
     
 <?php 

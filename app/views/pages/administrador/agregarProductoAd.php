@@ -27,6 +27,7 @@
             <input for="stock" type="text" name="stock" maxlength="50" required>
         <br>
         <br>
+        <!--Categoria del producto a agregar-->
         <label id="categoria">Categoria</label>
             <input for="categoria" type="text" name="category" maxlength="50" required>
         <br>
