@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form id="formRegistrar" method="post" action="<?php echo RUTA_URL;?>/AgregarProductoAd_Controller/registrarProducto">
+    <form id="formRegistrar" method="post" action="<?php echo RUTA_URL;?>/AgregarProductoAd_Controller/registrarProducto"><!--FALLA DESPUÉS DE ENVIAR-->
         <!--Nombre del producto a agregar-->
         <label for="nombreProducto">Nombre del producto</label>
             <input id="nombreProducto" type="text" name="nameProducto" maxlength="50" required>

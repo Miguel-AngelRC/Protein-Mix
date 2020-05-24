@@ -1,7 +1,7 @@
 <?php
     Class EliminarProductoAd_Controller extends Controller_Ad{
         
-        public function __Contruct(){
+        public function  __construct(){
             $this->vista('eliminarProductoAd');
         }
 
@@ -17,7 +17,7 @@
 
             if ($registrar->verificarProducto()) {
                 echo "<script>alert('Este producto no existe. Por favor ingrese otro.');</script>";//ventana emergente
-                $this->vista('index');
+                $this->vista('eliminarProductoAd');
             }
             else{
                 if ($registrar->eliminarProducto()) {

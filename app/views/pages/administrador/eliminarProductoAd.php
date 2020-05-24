@@ -7,9 +7,14 @@
 </head>
 <body>
     <form id="formRegistrar" method="post" action="<?php echo RUTA_URL;?>/EliminarProductoAd_Controller/ubicarProducto">
-        <!--Nombre del producto a agregar-->
+        <!--Nombre del producto a eliminar-->
         <label for="nombreProducto">Nombre del producto a eliminar</label>
             <input id="nombreProducto" type="text" name="nameProducto" maxlength="50" required>
+        <br>
+        <br>
+        <!--Categoría del producto a eliminar-->
+        <label for="categoria">Categoría del producto a eliminar</label>
+            <input id="categoria" type="text" name="category" maxlength="50" required>
         <br>
         <br>
         <input type="submit" value="Eliminar producto">
