@@ -19,11 +19,9 @@
     <!-- Estilos popup compra -->
     <link rel="stylesheet" href="<?php echo RUTA_URL;?>/css/estilos_popupCompra.css">
 
-
     <!-- Icono -->
     <link rel="shortcut icon" href="<?php echo RUTA_URL;?>/img/proteinmix.ico" type="image/x-icon">
 
     <title>Protein-Mix</title>
 </head>      
 <body>
-
