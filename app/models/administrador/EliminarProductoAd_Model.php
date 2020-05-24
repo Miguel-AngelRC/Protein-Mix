@@ -1,5 +1,5 @@
 <?php
-    Class AgregarProductoAd_Model{
+    Class EliminarProductoAd_Model{
 
         private $db;
         private $nombreProducto;
@@ -8,14 +8,14 @@
         public function __construct () {
             $this->db= new Base;//Hacer conexion con el constructor de Base
             $this->nombreProducto = $_POST['nameProducto'];
-            $this->categoria = $_POST['category'];
+            $this->categoria = (int)$_POST['category'];
         }
 
-        
         public function verificarProducto(){
             try {
-                $this->db->query("SELECT * FROM ".DB_NAME.".producto  WHERE nombreProducto = '".$this->nombreProducto."' AND categoria = '".$this->categoria."');
-                return $this->db->rowCount()==1;//retorna true o false
+                $consulta = "SELECT idProducto FROM ".DB_NAME.".Producto  WHERE nombreProducto = '".$this->nombreProducto."' AND idCategoria = ".$this->categoria.";";
+                $this->db->query($consulta);
+                return $this->db->rowCount()==1; //retorna true o false
             } catch (PDOException $e) {
                 $this->error = $e->getMessage();
                 echo $this->error;
@@ -23,10 +23,9 @@
             }
         }
 
-        
         public function eliminarProducto(){
             try {   
-                $this->db->query();
+                $this->db->query("DELETE FROM ".DB_NAME.".Producto WHERE nombreProducto = '".$this->nombreProducto."' AND idCategoria= ".$this->categoria);
                 $this->db->execute();
                 return true;
             } catch (PDOException $e) {

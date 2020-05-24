@@ -15,7 +15,7 @@
             //se incluye y crea una instancia del modelo EliminarProductoAd_Model
             $registrar = $this->modelo('EliminarProductoAd_Model');
 
-            if ($registrar->verificarProducto()) {
+            if (!$registrar->verificarProducto()) {
                 echo "<script>alert('Este producto no existe. Por favor ingrese otro.');</script>";//ventana emergente
                 $this->vista('eliminarProductoAd');
             }

@@ -13,7 +13,7 @@
         <br>
         <br>
         <!--Categoría del producto a eliminar-->
-        <label for="categoria">Categoría del producto a eliminar</label>
+        <label for="categoria">Id de la categoría del producto a eliminar</label>
             <input id="categoria" type="text" name="category" maxlength="50" required>
         <br>
         <br>
