@@ -10,17 +10,24 @@
 
         }
         
-        //Función verIdProducto que llama a consultaProducto
-        public function verProducto(){
+        public function registroProducto(){
             //se incluye y crea una instancia del modelo EditarProductoAd_Model
             $registrar = $this->modelo('EditarProductoAd_Model');
 
-            //$hola=$registrar->recibeRegistro();
-        }
-        
-        public function recibeRegistro(){
-            $fila=mysqli_result::fetch_array($consulta);
-            echo $fila['idProducto']. "-". $fila ['nombreProducto']. "-". $fila ['descripcion']. "-". $fila ['precio']. "-". $fila ['stock']. "-". $fila ['idCategoria'];
+            $imprimeFila=$consulta->consultaProducto();
+
+            $datos;
+            $i=0;
+            foreach ($imprimeFila as $e) {
+                $fila;
+                $fila['idProducto'] = (int) $e->idProducto;
+                $fila['descripcion'] = (string) $e->descripcion;
+                $fila['precio'] = (int) $e->precio;
+                $fila['stock'] = (int) $e->stock;
+                $fila['idCategoria'] = (int) $e->idCategoria;
+                $datos[$i] = $fila;
+            }
+            return $datos;
         }
     }
 ?>
