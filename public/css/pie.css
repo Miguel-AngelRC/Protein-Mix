@@ -11,9 +11,11 @@ footer h2{
 
 footer img{
     margin: 5px 10px;
+    cursor: pointer;
 }
 
-footer p{
+footer #conocenos{
+    width: fit-content;
     margin: 5px 20px;
     font-size: 30px;
     float: right;

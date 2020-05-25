@@ -3,21 +3,24 @@
 		<a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
 			
 		<div id="contenedor_Imagen">
-			<img src="<?php echo RUTA_URL;?>/img/vitaminaC.jpg" alt="vitamina C">
+			<img src="" alt="vitamina C">
 		</div>
 		
 		<div id="contenido">
 			<h3 id="producto"></h3>
 			<h4 id="descripcion"></h4>
+			<h6 id="cantidad"></h6>
+			<h6 id="msj"></h6>
 			<div id="btnAcciones">
-				<a class="opciones " href="<?php echo RUTA_URL;?>/Paginas_Controller/construccion">Agregar</a>
-            	<a class="opciones" href="<?php echo RUTA_URL;?>/Paginas_Controller/construccion">Quitar</a>
-	           	<a class="opciones" href="<?php echo RUTA_URL;?>/Paginas_Controller/construccion">Comprar</a>
+				<a class="opciones" onClick = "agregar()">Agregar</a>
+            	<a class="opciones" onClick = "quitar()">Quitar</a>
+	           	<a class="opciones" href="<?php echo RUTA_URL;?>/Paginas_Controller/compra">Comprar</a>
 			</div>
 	
 			<div id="datos">
-				<p id="stock">Stock: 40</p>
-				<p id="precio">Precio: 40</p>
+				<p id="st">Stock:</p>
+				<p id="stock"></p>
+				<p id="precio"></p>
 			</div>
 		</div>
 	</div>

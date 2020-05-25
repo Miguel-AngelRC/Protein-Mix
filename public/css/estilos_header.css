@@ -32,9 +32,11 @@ header{
     height: 48px;
 }
 
-#inicio a, #perfil a{
+#inicio a, #perfil div{
+    width: 80px;
     height: 50px;
     margin-left: 10px;
+    padding: 0px 10px;
     color: black;
     font-size: 25px;
     text-align: center;
@@ -52,8 +54,6 @@ header{
     left: 50%;
     transform: translateX(-50%);
     color: black;
-    width: 80px;
-    height: 105px !important;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -62,6 +62,7 @@ header{
     visibility: hidden;
 }
 
+
 #perfil:hover #sub_menu,#item{
     opacity: 1; 
     visibility: visible;
@@ -69,7 +70,6 @@ header{
 
 #sub_menu .item a{
     height: 35px;
-    width: 80px;
     padding: 1px;
     padding: 0px;
     margin: 2px;

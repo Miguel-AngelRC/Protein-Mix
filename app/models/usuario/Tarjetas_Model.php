@@ -12,7 +12,7 @@
         /*************************************/
         //Devuelve todos los id de las  categorias 
         public function idCategorias (){
-            $this->db->query("SELECT idCategoria FROM protein_mix.categoria");
+            $this->db->query("SELECT idCategoria FROM  ".DB_NAME.".Categoria");
             return $this->db->Registros(); 
         }
 
@@ -44,12 +44,29 @@
 
 
          /***************************************/
-        /*** Funciones para tabla Productos ***/
+        /*** Funciones para tarjetas Productos ***/
         /*************************************/
         //Obtiene el nombre de una categoria en especifico
         public function nombreCategoria ($idCategoria){
             $this->db->query("SELECT nombreCategoria FROM ".DB_NAME.".Categoria WHERE idCategoria = '$idCategoria'");
             return(string)$this->db->Registro()->nombreCategoria; 
+        }
+        //stock
+        public function stockProducto ($idProducto){
+            $this->db->query("SELECT stock FROM ".DB_NAME.".Producto WHERE idProducto = '$idProducto'");
+            return(string)$this->db->Registro()->stock; 
+        }
+
+        //precio
+        public function precioProducto ($idProducto){
+            $this->db->query("SELECT precio FROM ".DB_NAME.".Producto WHERE idProducto = '$idProducto'");
+            return(string)$this->db->Registro()->precio; 
+        }
+
+        //nombre
+        public function nombreProducto ($idProducto){
+            $this->db->query("SELECT nombreProducto FROM ".DB_NAME.".Producto WHERE idProducto = '$idProducto'");
+            return(string)$this->db->Registro()->nombreProducto; 
         }
 
         //Devuelve aquellos idproductos que pertenecen a la categoria
@@ -73,7 +90,6 @@
                     $this->db->query("SELECT stock FROM ".DB_NAME.".Producto WHERE idProducto = '$idProducto'");
                     $datosTarjeta ["stock"] = (string)$this->db->Registro()->stock;
 
-                    
                     return $datosTarjeta;
                 } 
                 catch (Exception $e) {
@@ -87,6 +103,15 @@
                 }
         }
 
+          /***************************************/
+        /*** Funciones para Busqueda Productos ***/
+        /*************************************/
+
+        //Devuelve aquellos idproductos que pertenecen a la categoria
+        public function idProductosBusqueda ($busqueda){
+            $this->db->query("SELECT idProducto,idCategoria FROM ".DB_NAME.".Producto WHERE nombreProducto like '%".$busqueda."%' or descripcion like '%".$busqueda."%'");
+            return $this->db->Registros(); 
+        }
         
     }
 ?>

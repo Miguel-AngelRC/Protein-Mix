@@ -8,10 +8,10 @@ SHOW PROCESSLIST;
 SHOW events;
 
 -- eliminar un evento haremos uso de DROP:
-DROP EVENT INSERTAID;
+DROP EVENT INSERTID;
 
 -- detener evento:
-ALTER EVENT INSERTAID
+ALTER EVENT INSERTID
 DISABLE;
 
 -- evento que se ejecuta cada día para insertar un idVentaDiaria (venta diaria)

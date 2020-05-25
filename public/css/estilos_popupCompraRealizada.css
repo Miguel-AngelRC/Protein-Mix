@@ -1,26 +1,15 @@
 @import url("https://use.fontawesome.com/releases/v5.5.0/css/all.css");
 
 /* Estilos contenido de ventana emergente*/
-#contenedor_Imagen{
-	width: 60%;
-}
- 
-#contenedor_Imagen img{
-    width: 100%;
-	object-fit: cover;
-	opacity: 0;
-	border-radius: 5px;
-}
 
-#contenido{
-	position: relative;
+#contenido2{
 	margin-left: 10px;
-	width: 40%;
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 }
 
-#contenido #producto {
+#contenido2 #producto2 {
 	font-size: 2vw;
 	font-weight: 600;
 	margin-bottom: 10px;
@@ -28,33 +17,16 @@
 	margin-top: 0px;
 }
 
-#contenido #descripcion {
+#contenido2 #descripcion2 {
 	position: relative;
 	font-size: 2vw;
-	font-weight: 300;
 	margin-bottom: 40px;
 	opacity: 0;
 }
 
-#contenido #cantidad {
-	position: relative;
-	font-size: 2vw;
-	font-weight: 300;
-	opacity: 0;
-	height: 20px;
-}
-#contenido #msj {
-	margin: 0px;
-	position: relative;
-	height: 20px;
-	font-size: 2vw;
-	color: red;
-	font-weight: 300;
-	opacity: 0;
-}
 
-#contenido #btnAcciones {
-	position: absolute; 
+
+#contenido2 #btnAcciones2 {
 	bottom: 40px;
 	width: 100%;
 	display: flex;
@@ -63,7 +35,7 @@
 	cursor: pointer;
 }
 
-#contenido #btnAcciones .opciones{
+#contenido2 #btnAcciones2 .opciones2{
 	display: flex;
 	align-items: center;
 	padding: 5px;
@@ -75,33 +47,9 @@
 	opacity: 0;
 }
 
-#contenido #datos{
-	display: flex;
-	justify-content: space-around;
-	color: black;
-	padding: 0px;
-	position: absolute;
-	bottom: 0px;
-	width: 100%;
-}
 
-#contenido  #datos p{
-	font-size: 1vw;
-	padding: 5px 0px;
-	margin: 0px;
-	color: black;
-	opacity: 0;
-	width: 50%;
-	text-align: left;
 
-}
-
-#contenido  #datos #st{
-	text-align: right;	
-	padding-right: 2px;
-}
-
-.contenedor article .btn-abrir-popup:hover {
+.contenedor article .btn-abrir-popup2:hover {
 	background: rgba(94,125,227, .9);
 }
 
@@ -109,7 +57,7 @@
 /* POPUP */
 /* ------------------------- */
 
-.overlay {
+.overlay2 {
 	background: rgba(0,0,0,.3);
 	position: fixed;
 	top: 0;
@@ -122,11 +70,11 @@
 	visibility: hidden;
 }
 
-.overlay.active {
+.overlay2.active {
 	visibility: visible;
 }
 
-.popup {
+.popup2 {
 	position: relative;
 	background: #F8F8F8;
 	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
@@ -143,7 +91,7 @@
 	align-content:space-between;
 }
 
-.popup .btn-cerrar-popup {
+.popup2 .btn-cerrar-popup2 {
 	position: absolute;
 	right: 5px;
 	top: 5px;
@@ -155,7 +103,7 @@
 	color: #BBBBBB;
 }
 
-.popup .btn-cerrar-popup:hover {
+.popup2 .btn-cerrar-popup2:hover {
 	color: #000;
 }
 
@@ -163,18 +111,13 @@
 /* ------------------------- */
 /* ANIMACIONES */
 /* ------------------------- */
-.popup.active {	transform: scale(1); opacity: 1; }
-.popup.active h3 { animation: entradaTitulo .8s ease .5s forwards; }
-.popup.active h4 { animation: entradaSubtitulo .8s ease .5s forwards; }
-
-.popup.active img { animation: entradaSubtitulo .8s ease .5s forwards; }
-.popup.active .opciones { animation: entradaSubtitulo .8s ease .5s forwards; }
-.popup.active p { animation: entradaSubtitulo .8s ease .5s forwards; }
-.popup.active #cantidad { animation: entradaSubtitulo .8s ease .5s forwards; }
-.popup.active #msj { animation: entradaSubtitulo .8s ease .5s forwards; }
+.popup2.active {	transform: scale(1); opacity: 1; }
+.popup2.active h3 { animation: entradaTitulo2 .8s ease .5s forwards; }
+.popup2.active h4 { animation: entradaSubtitulo2 .8s ease .5s forwards; }
+.popup2.active .opciones2 { animation: entradaSubtitulo2 .8s ease .5s forwards; }
 
 
-@keyframes entradaTitulo {
+@keyframes entradaTitulo2 {
 	from {
 		opacity: 0;
 		transform: translateY(-25px);
@@ -186,7 +129,7 @@
 	}
 }
 
-@keyframes entradaSubtitulo {
+@keyframes entradaSubtitulo2 {
 	from {
 		opacity: 0;
 		transform: translateY(25px);
@@ -198,3 +141,7 @@
 	}
 }
 
+
+#digitos{
+	font-size: 16px;
+}
