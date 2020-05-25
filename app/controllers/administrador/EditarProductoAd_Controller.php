@@ -10,7 +10,7 @@
 
         }
         
-        public function registroProducto(){
+        /*public function registroProducto(){
             //se incluye y crea una instancia del modelo EditarProductoAd_Model
             $registrar = $this->modelo('EditarProductoAd_Model');
 
@@ -27,6 +27,6 @@
                 $datos[$i] = $fila;
             }
             return $datos;
-        }
+        }*/
     }
 ?>

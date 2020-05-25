@@ -6,11 +6,10 @@
     <title>Document</title>
 </head>
 <body>
-    <!--<form id="formRegistrar" method="post" action="<?php echo RUTA_URL;?>/AgregarProductoAd_Controller/registrarProducto">FALLA DESPUÉS DE ENVIAR-->   
-        <div id="contenido">
+    <form id="formRegistrar" method="post" action="<?php echo RUTA_URL;?>/AgregarProductoAd_Controller/registrarProducto">
             <!--Nombre del producto a editar-->
         <label>Nombre del producto</label>
-            <input id="producto" type="text" name="nameProducto" required>
+            <input id="producto" type="text" name="nameProducto" values="" required>
         <br>
         <br>
         <!--Descripción del producto a editar-->
@@ -20,20 +19,19 @@
         <br>        
         <!--Precio del producto a editar-->
         <label>Precio</label>
-            <input id="precio" type="text" name="price" required>
+            <input id="precio" type="text" name="price" values="" required>
         <br>
         <br>  
         <!--Stock del producto a editar-->
         <label>Stock</label>
-            <input id="stock" type="text" name="stock" required>
+            <input id="stock" type="text" name="stock" values="" required>
         <br>
         <br>
-        <!--Categoria del producto a editar
+        <!--Categoria del producto a editar-->
         <label>Categoria</label>
-            <input for="categoria" type="text" name="category" maxlength="50" required>
+            <input for="categoria" type="text" name="category" maxlength="50" values="" required>
         <br>
         <br>-->
         <input type="submit" value="Editar producto">
-        </div>
 </body>
 </html>
