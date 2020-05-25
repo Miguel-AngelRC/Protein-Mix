@@ -22,7 +22,7 @@ btnCerrarPopup.addEventListener('click', function(e){
 });
 
 function traerDatos (idProducto,ruta){
-	ruta += "/Paginas_Controller/aux/" 
+	ruta += "/Paginas_Controller_Ad/aux/" 
 
 	$.ajax({
  		url: ruta,

@@ -13,7 +13,7 @@
 
         //página principal para administrador
         public function index(){
-                $this->vista('paginaPrincipalAd');
+            $this->vista('paginaPrincipalAd');
         }
         
         //Obtiene los id de los productos de la categoria
@@ -63,6 +63,12 @@
         //Coneguir datos de tupla en tupla de producto pero de una categoria especifica
         public function tarjetasProductos($idCategoria){
             return $this->modeloTarjeta->obtenerDatosProductos($idCategoria);
-        }   
+        }
+
+        public function aux(){
+            $datosProducto = $this->tarjetasProductos($_POST["idProducto"]);
+            $datosProducto = json_encode($datosProducto);
+            echo  $datosProducto;
+        }
     }
 ?>

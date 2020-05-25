@@ -15,7 +15,6 @@
             $registrar = $this->modelo('EditarProductoAd_Model');
 
             $imprimeFila=$consulta->consultaProducto();
-
             $datos;
             $i=0;
             foreach ($imprimeFila as $e) {

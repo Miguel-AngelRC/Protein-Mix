@@ -37,7 +37,6 @@
             $this->vista('../construccion');
         }
 
-
         /*<<<<<<METODOS PARA PAGINA CATEGORIA>>>>>>*/
 
         //Carga pagina categoria y se pasa como parametro el id de la categoria
@@ -71,6 +70,5 @@
             $datosProducto = json_encode($datosProducto);
             echo  $datosProducto;
         }
-
     }
 ?>

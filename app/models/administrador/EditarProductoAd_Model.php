@@ -24,7 +24,7 @@
         public function consultaProducto(){
             try {
                 $consulta=$this->db->query("SELECT * FROM ".DB_NAME.".Producto  WHERE idProducto = '".$this->idProducto."'");
-                return $this->db->Registros();  
+                return $this->db->registro();  
             } catch (PDOException $e) {
                 $this->error = $e->getMessage();
                 echo $this->error;
