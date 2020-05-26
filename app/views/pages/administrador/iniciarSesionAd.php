@@ -16,6 +16,7 @@
     <form id="formSesion" method="post" action="<?php echo RUTA_URL;?>/IniciarSesionAd_Controller/validarRegistro"> 
         <div id="contendorLogo">
             <img id="logo" src="<?php echo RUTA_URL;?>/img/proteinmix.png" alt="Protein-Mix">
+            <div id="tipoRegistro">Iniciar Sesión Administrador</div>
         </div>
 
         <!--Nombre del Administrador-->

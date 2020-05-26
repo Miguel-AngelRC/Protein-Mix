@@ -102,7 +102,7 @@ $(document).ready(function(){
 });
 
 function comprando(){
-	//window.history.back();
+	window.history.back();
 }
 
 function recibo(){

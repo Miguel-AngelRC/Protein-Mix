@@ -6,19 +6,33 @@
 			<img src="<?php echo RUTA_URL;?>/img/vitaminaC.jpg" alt="vitamina C">
 		</div>
 		
-		<div id="contenido">
+		<!--<div id="contenido">
 			<h3 id="producto"></h3>
-			<h4 id="informacion"><?php echo$datosTarjeta["descripcion"]?></h4>
-			<div id="btnAcciones">
-				<a class="opciones " href="<?php echo RUTA_URL;?>/Paginas_Controller_Ad/construccion">Agregar</a>
-            	<a class="opciones" href="<?php echo RUTA_URL;?>/Paginas_Controller_Ad/construccion">Quitar</a>
-	           	<a class="opciones" href="<?php echo RUTA_URL;?>/Paginas_Controller_Ad/construccion">Comprar</a>
-			</div>
-	
-			<div id="datos">
-				<p>Stock: 40</p>
-				<p>Precio: 40</p>
-			</div>
+			<h4 id="descripcion"></h4>
+			<h5 id="precio"></h5>
+			<h5 id="stock"></h5>
+		</div>-->
+
+		<div id="contenido">
+			<!--Nombre del producto a editar-->
+			<label >Nombre producto</label>
+            <input id="nombreProduc" id="producto" type="text" name="nameProducto" values="" required>
+        	<br>
+        	<!--Descripción del producto a editar-->
+        	<label>Descripción</label>
+            <textarea id="descripcionProduc" name="description" cols="50" rows="6"></textarea>
+        	<br>    
+        	<!--Precio del producto a editar-->
+        	<label >precio</label>
+            <input id="precioProduc" type="text" name="price" values="" required>
+        	<br>
+        	<!--Stock del producto a editar-->
+        	<label >Stock</label>
+            <input id="stockProduc" type="text" name="stock" values="" required>
+       		<br>
+        	<buttom id="btnGuardarCambios" type="submit" onclick="guardarCambios()">Efectuar cambios</buttom>
 		</div>
 	</div>
 </div>
+
+<script src="<?php echo RUTA_URL;?>/js/popup_Modificar.js"></script> <!-- JS de compra -->

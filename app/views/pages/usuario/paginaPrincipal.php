@@ -11,6 +11,6 @@
 <?php require_once RUTA_APP.'/views/inc/usuario/tarjetas_Categoria.php'; ?>
 
 <!--------------------------- Footer ------------------------->
-<?php require_once RUTA_APP.'/views/inc/footer.php';?>
+<?php require_once RUTA_APP.'/views/inc//usuario/footer.php';?>
 
 <script src="<?php echo RUTA_URL;?>/js/vaciarCarrito.js"></script> <!-- JS de banner -->

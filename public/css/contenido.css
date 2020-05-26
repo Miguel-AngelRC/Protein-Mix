@@ -124,7 +124,65 @@
 /*Estilos para imagen de los productos*/
 .img_producto{
     float: left;
-    width: 45%;
+    width: 45% !important;
     height: 100%;
     object-fit: cover;
+}
+
+/*Estilos para boton eliminar y modificar productos*/
+#eliminar,#modificar{
+    width: 48%;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 5px;
+
+}
+
+#eliminar{
+    left: 0px ;
+}
+
+#modificar{
+    right: 0px;
+    background: #FED641;
+}
+
+/*estilo para boton agregar productos*/
+#contenedorAgregar{
+    display:flex;  
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 30px;
+}
+
+#btnAgregar{
+
+    text-decoration: none;
+    color: white; 
+    font-size: 25px;
+    background: #FED641;
+    height: 50px;
+    width: 15vw;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: black 1px 1px 5px;
+    margin-left: 20px;
+}
+
+#refrescar{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    text-decoration: none;
+    color: white; 
+    font-size: 25px;
+    background: #FED641;
+    height: 50px;
+    width: 15vw;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: black 1px 1px 5px;
+    margin-left: 20px;
 }

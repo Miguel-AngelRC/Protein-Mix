@@ -14,4 +14,5 @@
 <?php require_once RUTA_APP.'/views/inc/administrador/popup_Compra.php';?>
 
 <!--------------------------- Footer ------------------------->
-<?php require_once RUTA_APP.'/views/inc/footer.php';?>
+<?php require_once RUTA_APP.'/views/inc/administrador/footer.php';?>
+<script src="<?php echo RUTA_URL;?>/js/popup_Compra.js"></script> <!-- JS de popupCompra AGREGADO 24 05 2020-->

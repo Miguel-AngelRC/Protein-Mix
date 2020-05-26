@@ -10,20 +10,14 @@
           <a href="<?php echo RUTA_URL;?>/Paginas_Controller_Ad">Inicio</a>
         </li>
         <li id="perfil">
-            <a href=""> Perfil</a>
+        <div>Perfil</div>
             <ul id="sub_menu">
-                <li class="item"><a href="<?php echo RUTA_URL;?>/RegistrarAd_Controller">Registrarse</a></li>
-                <li class="item"><a href="<?php echo RUTA_URL;?>/IniciarSesionAd_Controller">Iniciar Sesión</a></li>
-                <li class="item"><a href="<?php echo RUTA_URL;?>/IniciarSesionAd_Controller">Cerrar sesión</a></li>
+                <li id="registrarse" class="item"><a href="<?php echo RUTA_URL;?>/RegistrarAd_Controller">Registrarse</a></li>
+                <li id="iniciarSesion" class="item"><a href="<?php echo RUTA_URL;?>/IniciarSesionAd_Controller">Iniciar Sesión</a></li>
+                <li id="cerrarSesion" class="item"><a href="<?php echo RUTA_URL;?>/Paginas_Controller_Ad/cerrarSesion">Cerrar sesión</a></li>
+                <li id="verVentas" class="item"><a href="<?php echo RUTA_URL;?>/VerVentasDiariasAd_Controller">Ver ventas</a></li><!--PRUEBA: agregado link para ver ventas-->
             </ul>  
          </li>
     </ul>
 </nav>
 
-<!-- Campo de busqueda -->
-<section id="buscar">
-    <form >
-        <input id="input_buscar" name="buscar" type="text" >
-            <input id="btn_buscar" type="button" value="Buscar">        
-        </form>
-</section>

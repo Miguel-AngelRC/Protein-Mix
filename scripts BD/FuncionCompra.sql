@@ -44,4 +44,57 @@ begin
 end; //
 delimiter ;
 
+
+-- funcion para actualizar el total de una venta diaria
+delimiter //
+DROP function IF exists totalCompraDiaria//
+
+create function totalCompraDiaria() returns boolean-- recibe el idCompra de la compra que se esté realizando
+begin
+	declare fechahoy date; 
+    declare total float;
+    
+    set fechahoy = curdate();
+    
+    if (select count(*) from VentaDiaria where fecha = fechahoy) > 0 then
+		set total = (select sum(totalDeLaCompra) from compra natural join VentaDiaria where fecha = fechahoy);
+		update VentaDiaria set totalComprasD = total where fecha = fechahoy;
+    end if;
+    return true;
+end; //
+delimiter ;
+
+
+-- funcion para actualizar el total de una venta diaria
+delimiter //
+DROP function IF exists insertaVentaDiaria//
+
+create function insertaVentaDiaria() returns boolean-- recibe el idCompra de la compra que se esté realizando
+begin
+	declare fechahoy date; 
+    
+    set fechahoy = curdate();
+    
+    if (select count(*) from VentaDiaria)>0 then
+		if (select max(fecha) from VentaDiaria where fecha = fechahoy) then
+			 return true;
+		else 
+			insert into  VentaDiaria (totalComprasD, fecha) values (null, CURDATE());
+		end if;
+    else 
+		 insert into  VentaDiaria (totalComprasD, fecha) values (null, CURDATE());
+    end if;
+    
+    return true;
+end; //
+delimiter ;
+select curdate();
+select max(fecha) from VentaDiaria;
+
+select insertaVentaDiaria();
+select totalCompraDiaria();
+
+select * from ventadiaria;
+select * from compra;
+
 SET GLOBAL log_bin_trust_function_creators = 1;

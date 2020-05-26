@@ -86,6 +86,6 @@
             $this->execute();
             return $this->stmt->rowCount();
         }
-}
+    }
 
 ?>

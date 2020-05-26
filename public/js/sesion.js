@@ -21,3 +21,26 @@ function sinSesion (){
 function whats(){
     alert("Contacto por WhatsApp: 272 189 1928")
 }
+
+
+/* seseion para usuario*/
+function sesionActivaAd (nombre){
+    //$("#cerrarSesion").css("display","block");
+    $("#registrarse,#iniciarSesion").remove();
+    
+    $("#perfil div").text(nombre);
+    $("#perfil div").width("fit-content");
+    ancho = $("#perfil div").width();
+    if(ancho>80){
+        $(".item").width(ancho);
+    }
+    
+}
+
+function sinSesionAd (){
+    $("#cerrarSesion,#usuario,#verVentas").remove();
+
+    $(".item").width(80);
+}
+
+

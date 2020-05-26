@@ -1,0 +1,50 @@
+.form-register{
+	width: 900px;
+	background-color: rgb(255, 255, 255);
+	padding: 30px;
+	margin: auto;
+	margin-top: 10px;
+	border-radius: 4px;
+	box-shadow: 7px 5px 20px #FED641;
+}
+
+h4{
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-style: italic;
+}
+
+.etiqueta{
+    color: rgb(0, 0, 0);/*Color de letra*/
+    font-size: 18px;/*Tamaño de letra*/
+}
+
+.controls{
+	width: 100%;
+	background: rgb(255, 255, 255);
+	padding: 10px;
+	border-radius: 4px;
+    margin-bottom: 16px;
+	border: 1px solid #FED641;
+	font-size: 18px;
+}
+
+.form-register .botons{
+	width: 150px;/*Ancho del botón*/
+	background: #FED641;/*Color del botón*/
+    border: none;
+    border-radius: 5px;
+	padding: 12px;
+	color: rgb(0, 0, 0);/*Color de letra del botón*/
+    font-size: 16px;
+	cursor: pointer;
+	box-shadow: 1px 1px 5px black;
+	font-weight: lighter;
+}
+
+.form-register #archivo{
+    border-radius: 5px;
+	padding: 12px;
+	cursor: pointer;
+	color: rgb(212, 211, 209)6, 214, 211);
+}

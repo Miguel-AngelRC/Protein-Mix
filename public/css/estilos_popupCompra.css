@@ -198,3 +198,42 @@
 	}
 }
 
+
+/*Estilos para administrador en popupmodificar*/
+#btnGuardarCambios{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+    background: #FED641;
+	color: black;
+	box-shadow: black 1px 1px 5px;
+	opacity: 0;
+	cursor: pointer;
+	color: white;
+	font-size: 18px;
+}
+
+#btnGuardarCambios,#nombreProduc,#descripcionProduc,#precioProduc,#stockProduc,label{
+	opacity: 0;
+	margin: 2px;
+}
+
+label {
+	font-size: 18px;
+	text-align: left;
+}
+
+#descripcionProduc{
+	border: none;
+	height: 60px;
+	width: 100%;
+}
+
+/*agregar animaciones*/
+.popup.active #btnGuardarCambios { animation: entradaSubtitulo .8s ease .5s forwards; }
+.popup.active #nombreProduc { animation: entradaSubtitulo .8s ease .5s forwards; }
+.popup.active #descripcionProduc { animation: entradaSubtitulo .8s ease .5s forwards; }
+.popup.active #precioProduc { animation: entradaSubtitulo .8s ease .5s forwards; }
+.popup.active #stockProduc { animation: entradaSubtitulo .8s ease .5s forwards; }
+.popup.active label { animation: entradaSubtitulo .8s ease .5s forwards; }

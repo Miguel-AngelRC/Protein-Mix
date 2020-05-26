@@ -15,6 +15,7 @@
         
         <form id="formRegistrar" method="post" action="<?php echo RUTA_URL;?>/RegistrarAd_Controller/registrarAdministrador">  
             <div id="contendorLogo">
+                <div id="tipoRegistro">Registrar Administrador</div>
                 <img id="logo" src="<?php echo RUTA_URL;?>/img/proteinmix.png" alt="Protein-Mix">
             </div>
                 <!--Nombre del Administrador-->

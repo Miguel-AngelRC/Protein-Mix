@@ -12,6 +12,11 @@
             $this->modeloTarjeta = $this->modelo('Tarjetas_Model'); 
         }
 
+        public function inserta_Actualiza_VentaDiaria (){
+            $modelo = $this->modelo('actualizaVentaDiaria');
+            $modelo->inserta_Actualiza_VentaDiaria();
+        }
+
         public function cerrarSesion(){
             SESSION_DESTROY();
             SESSION_START();
@@ -28,6 +33,7 @@
         public function index(){ 
             $this->vista('paginaPrincipal');
             if (isset($_SESSION["nombre"])){
+                $this->inserta_Actualiza_VentaDiaria();
                 echo "<script>sesionActiva('".$_SESSION["nombre"]."'); </script>";
             }else{
                 echo "<script>
@@ -167,7 +173,7 @@
         public function tarjetasProductos($idCategoria){
             return $this->modeloTarjeta->obtenerDatosProductos($idCategoria);
         }
-
+ 
         //obtener los datos  de un producto por Ajax
         public function datosProducto(){
             $datosProducto = $this->tarjetasProductos($_POST["idProduc"]);
