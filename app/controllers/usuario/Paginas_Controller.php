@@ -14,8 +14,13 @@
 
         public function cerrarSesion(){
             SESSION_DESTROY();
+            SESSION_START();
+            $_SESSION["cantidadTotal"]=0;
+            $_SESSION["productos"]=[];
             echo "<script>window.location.href='".RUTA_URL."/Paginas_Controller/'</script>";
         }
+
+
 
         /*<<<<<<METODOS PARA PAGINA PRINCIPAL >>>>>>*/
 
@@ -180,6 +185,7 @@
                             $encontrado = true; 
                             if ($this->stockProducto($idProducto) > $_SESSION["productos"][$i]["cantidad"]){
                                 $_SESSION["productos"][$i]["cantidad"]+=1;
+                                $_SESSION["cantidadTotal"]+=1;
                                 echo json_encode(true); 
                                 break;
                             }else{
@@ -194,6 +200,7 @@
                             $_SESSION["productos"] [] = [
                                 "idProducto" => $idProducto,
                                 "cantidad" => 1];
+                                $_SESSION["cantidadTotal"]+=1;
                             echo json_encode(true);
                         }else{
                             echo json_encode(false);
@@ -204,6 +211,7 @@
                         $_SESSION["productos"] [] = [
                                 "idProducto" => $idProducto,
                                 "cantidad" => 1];
+                        $_SESSION["cantidadTotal"]+=1;
                         echo json_encode(true);
                     }else{
                         echo json_encode(false);
@@ -241,8 +249,9 @@
                     if (isset($_SESSION["productos"][$i]["idProducto"]) && $_SESSION["productos"][$i]["idProducto"]== $idProducto){
                         if($_SESSION["productos"][$i]["cantidad"]>0){
                             $_SESSION["productos"][$i]["cantidad"]-=1;
+                            $_SESSION["cantidadTotal"]-=1;
                             if($_SESSION["productos"][$i]["cantidad"]==0){
-                                $this->recorrerArreglo($i);
+                                $this->recorrerArreglo($i);    
                             }
                         }
                         $encontrado = true; 
@@ -268,6 +277,16 @@
             }
         }
 
+        public function cantidadTotal(){
+            echo $_SESSION["cantidadTotal"];
+        }
+        
+        public function vaciarCarrito(){
+            if(isset($_SESSION["cantidadTotal"])){
+                $_SESSION["cantidadTotal"]=0;
+                $_SESSION["productos"]=[];
+            }
+        }
 
         //Obtener cantidad a comprar de cierto producto
         public function cantidadProducto (){

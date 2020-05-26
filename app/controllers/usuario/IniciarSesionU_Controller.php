@@ -17,7 +17,11 @@
 
             if ($verificar[0]) {
                 $_SESSION['nombre']= $_POST['username'];
-                $_SESSION["productos"]=[];
+                if(!isset($_SESSION["cantidadTotal"])){
+                    $_SESSION["cantidadTotal"]=0;
+                    $_SESSION["productos"]=[];
+                }
+                
                 echo "<script>window.location.href='".RUTA_URL."/Paginas_Controller/'</script>";
             }else{
                 echo "<script>alert('$verificar[1]');</script>";

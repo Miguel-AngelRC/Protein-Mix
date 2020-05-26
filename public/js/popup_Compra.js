@@ -16,6 +16,7 @@ btnCerrarPopup.addEventListener('click', function(e){
 	e.preventDefault();
 	overlay.classList.remove('active');
 	popup.classList.remove('active');
+	$('#msj').text("");
 });
 
 //Obtine la cantidad a comprar de un producto
@@ -77,6 +78,7 @@ function traerDatos (idCategoria,idProduc,ruta){
 
 var idProducto;
 var rutaArc;
+var cantidadTotal;
 
  function agregar() {
 	let rutaArchivo = rutaArc+"/Paginas_Controller/agregar"
@@ -100,6 +102,7 @@ var rutaArc;
 	   }
    })
    cantidadProducto(false);
+   actualizarTotal(rutaArc);
  }
 
 function quitar() {
@@ -124,6 +127,48 @@ function quitar() {
 	   }
    })
    cantidadProducto(false);
+   actualizarTotal(rutaArc);
 }
+
+
+function actualizarTotal (ruta){
+	rutaArchivo = ruta+"/Paginas_Controller/cantidadTotal"
+
+	$.ajax({
+		url: rutaArchivo,
+	   type: 'POST',
+	   success:function (response){
+		   if(parseInt(response)>0){
+				$("#cantidadEnCarrito").text(response);
+				$("#btnComprarFlotante").show(200);
+				$("#cantidadEnCarrito").show(200);
+				$(".vaciarCarrito").show(200);
+			}else{
+				$("#btnComprarFlotante").hide(200);
+				$("#cantidadEnCarrito").hide(200);
+				$(".vaciarCarrito").hide(200);
+			}
+		
+	   }
+   })
+
+}
+
+function vaciarCarrito (ruta){
+	rutaArchivo = ruta+"/Paginas_Controller/vaciarCarrito"
+
+	$.ajax({
+		url: rutaArchivo,
+	   type: 'POST',
+	   success:function (response){
+
+	   }
+   });
+
+   actualizarTotal(rutaArc);
+   overlay.classList.remove('active');
+    popup.classList.remove('active');
+}
+
 
 

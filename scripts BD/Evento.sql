@@ -17,7 +17,7 @@ DISABLE;
 -- evento que se ejecuta cada día para insertar un idVentaDiaria (venta diaria)
 create event INSERTID -- programar tarea que queremos que se ejecute de forma periódica o momento en concreto
 on SCHEDULE every 1 day -- se ejecute cada día
-do insert ventadiaria (totalComprasD, fecha) values (null, CURDATE()); -- inserta un idVentaDiaria en la tabla ventadiaria
+do insert VentaDiaria (totalComprasD, fecha) values (null, CURDATE()); -- inserta un idVentaDiaria en la tabla ventadiaria
 -- on completion preserve -- para que no se elimine el evento
 
 -- evento que se ejecuta cada día para insertar un idVentaDiaria y la fecha actual (tabla ventadiaria) PRUEBA!!

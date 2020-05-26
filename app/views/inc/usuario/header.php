@@ -18,11 +18,13 @@
             </ul>  
          </li>
     </ul>
+    <a id="linkCompra" href="<?php echo RUTA_URL;?>/Paginas_Controller/compra"><img id="btnComprarFlotante" src="<?php echo RUTA_URL?>/img/compra.png" onclick=""></a>
+    <div id="cantidadEnCarrito"><?php echo $_SESSION["cantidadTotal"]?></div>
+    <a class="vaciarCarrito" onclick="vaciarCarrito('<?php echo RUTA_URL?>')"><img  class="vaciarCarrito" src="<?php echo RUTA_URL?>/img/cerrar.png" onclick=""></a>
+
 </nav>
 
 <!-- Carrito -->
-
-<!-- <h3><?php print_r ($_SESSION["productos"])?></h3> -->
 
 <!-- Campo de busqueda -->
 <section id="buscar">

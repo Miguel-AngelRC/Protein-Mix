@@ -14,7 +14,6 @@
 <!--------------------------- Invocar scripts ------------------------->
 <script src="<?php echo RUTA_URL;?>/js/materialize.js"></script> <!-- JS de materialize -->
 <script src="<?php echo RUTA_URL;?>/js/bannerConf.js"></script> <!-- JS de banner -->
-<script src="<?php echo RUTA_URL;?>/js/popup_CompraRealizada.js"></script> <!-- JS de compra -->
 
 
 </body>

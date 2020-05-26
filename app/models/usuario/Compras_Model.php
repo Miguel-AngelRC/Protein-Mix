@@ -27,6 +27,7 @@
 
             $this->db->query("SELECT totalFinalCompra(".$idCompra.");");
             $_SESSION["productos"] = [];//se limpia carrito de compras
+            $_SESSION["cantidadTotal"] = 0;//se limpia carrito de compras
             $resultado = $this->db->Registro();
             $valor; 
             foreach ($resultado as $res) {
