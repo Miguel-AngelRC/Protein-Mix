@@ -23,7 +23,8 @@
                 <h2><?php echo $datosTarjeta["titulo"]?></h2>
                 <p> <?php echo $datosTarjeta["descripcion"]?></p>
                 <p class="precio">Precio $<?php echo$datosTarjeta["precio"]?></p>
-                <buttom  class="btn-abrir-popup" onclick="abrirPopup(<?php echo $productos[$i]?>,'<?php echo RUTA_URL ?>')">Modificar</buttom>
+                <buttom id="modificar" class="btn-abrir-popup" onclick="abrirPopupModificar(<?php echo $datos[0]?>,<?php echo $productos[$i]?>,'<?php echo RUTA_URL ?>')">Modificar</buttom>
+                <buttom id="eliminar" class="btn-abrir-popup" onclick="eliminarProducto(<?php echo $productos[$i]?>,'<?php echo RUTA_URL?>')"> Eliminar</buttom>
             </div>
             <img class="img_producto" src="<?php echo RUTA_URL;?>/img/<?php echo $datos[0]."/".$productos[$i]?>.jpg" alt="Vitamina C">
         
@@ -39,6 +40,4 @@
 
 <div id="contenedorAgregar"> 
     <a  id ="btnAgregar" href="<?php echo RUTA_URL;?>/AgregarProductoAd_Controller">Agregar</a>
-    <a  id ="btnAgregar" href="<?php echo RUTA_URL;?>/EliminarProductoAd_Controller">Eliminar</a><!--boton agregado para prueba-->
-    <a  id ="btnAgregar" href="<?php echo RUTA_URL;?>/EditarProductoAd_Controller">Editar</a><!--boton agregado para prueba-->
 </div>

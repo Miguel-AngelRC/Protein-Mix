@@ -129,13 +129,35 @@
     object-fit: cover;
 }
 
+/*Estilos para boton eliminar y modificar*/
+#eliminar,#modificar{
+    width: 48%;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 5px;
+
+}
+
+#eliminar{
+    left: 0px ;
+}
+
+#modificar{
+    right: 0px;
+    background: #FED641;
+}
+
 /*estilo para boton agregar*/
 #contenedorAgregar{
     border: solid black 1px;
     display:flex;  
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 30px;
 }
 
 #btnAgregar{
+
     text-decoration: none;
     color: white; 
     font-size: 25px;

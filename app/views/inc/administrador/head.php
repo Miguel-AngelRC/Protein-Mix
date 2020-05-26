@@ -19,9 +19,19 @@
     <!-- Estilos popup compra -->
     <link rel="stylesheet" href="<?php echo RUTA_URL;?>/css/estilos_popupCompra.css">
 
+      <!-- Estilos tabla conocenos -->
+      <link rel="stylesheet" href="<?php echo RUTA_URL;?>/css/conocenos.css"
+
+
     <!-- Icono -->
     <link rel="shortcut icon" href="<?php echo RUTA_URL;?>/img/proteinmix.ico" type="image/x-icon">
 
+    <!-- Script para la sesion -->
+    <script type="text/javascript" src="<?php echo RUTA_URL?>/js/sesion.js?v=<?php echo(rand()); ?>"></script>
+    <script src="<?php echo RUTA_URL;?>/js/jquery-3.5.1.js"></script> <!-- JS de Jquery -->
+
     <title>Protein-Mix</title>
-</head>      
+</head>
 <body>
+  
+</body>

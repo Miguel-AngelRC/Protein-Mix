@@ -10,20 +10,24 @@
           <a href="<?php echo RUTA_URL;?>/Paginas_Controller/index">Inicio</a>
         </li>
         <li id="perfil">
-            <a href=""> Perfil</a>
+            <div>Perfil</div>
             <ul id="sub_menu">
-                <li class="item" > <a href="<?php echo RUTA_URL;?>/"> Registrarse</a></li>
-                <li class="item"><a href="<?php echo RUTA_URL;?>/IniciarSesionU_Controller">Iniciar Sesión</a></li>
-                <li class="item"><a href="<?php echo RUTA_URL;?>/IniciarSesionU_Controller">Cerrar sesión</a></li>
+                <li id="registrarse" class="item " > <a href="<?php echo RUTA_URL;?>/"> Registrarse</a></li>
+                <li id="iniciarSesion" class="item"><a href="<?php echo RUTA_URL;?>/IniciarSesionU_Controller">Iniciar Sesión</a></li>
+                <li id="cerrarSesion" class="item"><a href="<?php echo RUTA_URL;?>/Paginas_Controller/cerrarSesion">Cerrar sesión</a></li>
             </ul>  
          </li>
     </ul>
 </nav>
 
+<!-- Carrito -->
+
+<!-- <h3><?php print_r ($_SESSION["productos"])?></h3> -->
+
 <!-- Campo de busqueda -->
 <section id="buscar">
-    <form >
+    <form  method="post" action="<?php echo RUTA_URL;?>/Paginas_Controller/idProductosBusqueda">
         <input id="input_buscar" name="buscar" type="text" >
-            <input id="btn_buscar" type="button" value="Buscar">        
-        </form>
+            <input id="btn_buscar" type="submit" value="Buscar">        
+    </form>
 </section>

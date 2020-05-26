@@ -7,7 +7,7 @@
 
         //carga pagina index metodo por default
         public function index(){
-
+            
         }
 
         //Función registrarProducto que llama a verificarProducto o a insertarProducto
@@ -22,6 +22,8 @@
             else{
                 if ($registrar->insertarProducto()) {
                     echo "<script>alert('Se ha registrado el producto.');</script>";//ventana emergente
+                    $categoria = $_POST['category'];
+                    echo "<script>window.location.href='".RUTA_URL."/Paginas_Controller_Ad/categoria/$categoria'</script>";
                 }
                 else{
                     echo "<script>alert('No se agregó correctamente el producto. Por favor intente de nuevo.');</script>";//ventana emergente

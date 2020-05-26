@@ -1,4 +1,5 @@
 <?php
+    SESSION_START();
     class IniciarSesionAd_Controller extends Controller_Ad{
         public function  __construct (){
             $this->vista('iniciarSesionAd');
@@ -17,6 +18,7 @@
             $verificar = $iniciarSesion->validarDatos() ;
 
             if ($verificar[0]) {
+                $_SESSION['nombre']= $_POST['username'];
                 //header('Location: '.RUTA_URL.'/Paginas_Controller/indexAd');
                 echo "<script>window.location.href='".RUTA_URL."/Paginas_Controller_Ad'</script>";
             }

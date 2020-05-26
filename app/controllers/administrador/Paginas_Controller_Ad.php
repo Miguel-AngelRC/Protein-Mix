@@ -1,5 +1,5 @@
 <?php
-
+    SESSION_START();
     class Paginas_Controller_Ad extends Controller_Ad{
         
         private $modeloTarjeta;
@@ -14,6 +14,13 @@
         //página principal para administrador
         public function index(){
             $this->vista('paginaPrincipalAd');
+            if (isset($_SESSION["nombre"])){
+                echo "<script>sesionActiva('".$_SESSION["nombre"]."'); </script>";
+            }else{
+                echo "<script>
+                        sinSesion();
+                    </script>";
+            }   
         }
         
         //Obtiene los id de los productos de la categoria
@@ -42,6 +49,13 @@
         //Carga pagina categoria y se pasa como parametro el id de la categoria
         public function categoria($categoria){
             $this->vista('categoria',$categoria);
+            if (isset($_SESSION["nombre"])){
+                echo "<script>sesionActiva('".$_SESSION["nombre"]."'); </script>";
+            }else{
+                echo "<script>
+                        sinSesion();
+                    </script>";
+            } 
         }
 
         //Obtiene el nombre de la categoria
@@ -69,6 +83,29 @@
             $datosProducto = $this->tarjetasProductos($_POST["idProducto"]);
             $datosProducto = json_encode($datosProducto);
             echo  $datosProducto;
+        }
+
+
+        //obtener los datos  de un producto por Ajax
+        public function datosProducto(){
+            $datosProducto = $this->tarjetasProductos($_POST["idProduc"]);
+            $datosProducto = json_encode($datosProducto);
+            echo  ($datosProducto);
+        }
+        //guardar cambios en producto
+        public function guardarCambios(){
+            
+            $idP = $_POST["idProducto"];
+            $nombreP = $_POST["nombreP"];
+            $descripcionP = $_POST["descripcionP"];
+            $stockP = $_POST["stockP"];
+            $precioP = $_POST["precioP"];
+
+            $modifcar = $this->modelo("EditarProductoAd_Model");
+
+            $datosProducto = $modifcar->guardarCambios($idP,$nombreP, $descripcionP,$stockP, $precioP);
+            $datosProducto = json_encode($datosProducto);
+            echo  ($datosProducto);
         }
     }
 ?>

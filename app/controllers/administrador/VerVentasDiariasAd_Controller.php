@@ -1,4 +1,5 @@
 <?php
+    SESSION_START();
     class VerVentasDiariasAd_Controller extends Controller_Ad{
 
         public function  __construct (){
@@ -7,6 +8,11 @@
 
         //carga pagina index metodo por default
         public function index(){
+            if (isset($_SESSION["nombre"])){
+                echo "<script>sesionActiva('".$_SESSION["nombre"]."'); </script>";
+            }else{
+                echo "<script>sinSesion();</script>";
+            }
         }
 
         function reciboTabla(){

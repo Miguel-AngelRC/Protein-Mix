@@ -1,0 +1,79 @@
+
+#contenedorTabla{
+    width: 80vw;
+    margin: 30px auto;
+}
+
+th{
+    color: #FED641;
+    font-size: 25px;
+    text-align: center;
+}
+
+td{
+    text-align: center;
+}
+
+#totalContenedor {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 10px;
+}
+
+#totalContenedor p{
+    width: fit-content;
+    margin: 0px;
+    text-align: right;
+    font-size: 30px;
+    display: flex;
+    padding: 5px;
+}
+
+#total{
+    display: inline;
+    color: red;
+    font-size: 30px;
+}
+
+
+
+#contenedorCompra{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+#contenedorCompra input{
+    display: flex;
+    flex-direction: row;
+    width: 25vw;
+    height: 30px;
+    border: .5px solid black;
+
+}
+
+#btnComprar{
+    width: 150px !important;
+    height: 40px !important;
+    background: red;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 0px 10px;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    font-weight: bolder;
+}
+
+#contenedorCompra label{
+    font-size: 20px;
+    color: black;
+    width: 250px;
+}

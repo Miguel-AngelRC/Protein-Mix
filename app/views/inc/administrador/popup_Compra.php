@@ -15,23 +15,23 @@
 
 		<div id="contenido">
 			<!--Nombre del producto a editar-->
-			<label>Nombre del producto</label>
-            <input id="producto" type="text" name="nameProducto" values="" required>
+			<label >Nombre producto</label>
+            <input id="nombreProduc" id="producto" type="text" name="nameProducto" values="" required>
         	<br>
         	<br>
         	<!--Descripción del producto a editar-->
         	<label>Descripción</label>
-            <textarea id="descripcion" name="description" cols="50" rows="6"></textarea>
+            <textarea id="descripcionProduc" name="description" cols="50" rows="6"></textarea>
         	<br>
         	<br>        
         	<!--Precio del producto a editar-->
-        	<label>Precio</label>
-            <input id="precio" type="text" name="price" values="" required>
+        	<label >precio</label>
+            <input id="precioProduc" type="text" name="price" values="" required>
         	<br>
         	<br>  
         	<!--Stock del producto a editar-->
-        	<label>Stock</label>
-            <input id="stock" type="text" name="stock" values="" required>
+        	<label >Stock</label>
+            <input id="stockProduc" type="text" name="stock" values="" required>
        		<br>
         	<br>
         	<!--Categoria del producto a editar
@@ -39,8 +39,7 @@
             <input for="categoria" type="text" name="category" maxlength="50" required>
         	<br>
         	<br>-->
-        	<input type="submit" value="Editar producto">
+        	<input type="submit" value="Efectuar cambios" onclick="guardarCambios()">
 		</div>
-
 	</div>
 </div>
